@@ -1,5 +1,11 @@
 FEDs::Application.routes.draw do
+  get "index/index"
+
+  devise_for :users
+
+  root :to => "index#index"
   # The priority is based upon order of creation:
+  #
   # first created -> highest priority.
 
   # Sample of regular route:

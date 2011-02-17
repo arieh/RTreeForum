@@ -9,6 +9,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'nifty-generators'
 gem 'devise'
 gem 'rspec'
+gem 'compass'
 
 # Use unicorn as the web server
 # gem 'unicorn'
