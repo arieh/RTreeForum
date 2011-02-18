@@ -3,7 +3,11 @@ FEDs::Application.routes.draw do
 
   devise_for :users
 
-  root :to => "index#index"
+  root :to => "posts#index"
+
+  resource :posts
+
+  match '/posts/new/:parent_id', :controller=>'posts', :action=>'new', :defaults => {:parent_id => false}, :as => :new_post_with_parent
   # The priority is based upon order of creation:
   #
   # first created -> highest priority.

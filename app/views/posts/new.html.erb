@@ -1,0 +1,16 @@
+<h2><%=t "post.new.title" %></h2>
+<%= form_for @Post do |f|%>
+  <fieldset>
+    <dl>
+      <dt><%=f.label :title, t('post.new.fields.title')%></dt>
+        <dd><%=f.text_field :title%></dd>
+      <dt><%=f.label :body, t('post.new.fields.body')%></dt>
+        <dd><%=f.text_area :body%></dd>
+    </dl>
+    <%=f.submit :submit,{:value => "post.new.title"}%>
+    <%if (@Post.parent_id)%> 
+      <%= f.hidden_field :parent_id,{:value=>@Post.parent_id}%>
+    <% end%>
+    <%=f.hidden_field :base,{:value=>@Post.base}%>
+  </fieldset>
+<% end %>
