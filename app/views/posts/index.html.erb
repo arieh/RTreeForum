@@ -18,6 +18,7 @@
           <header>
             <h3><%=c.title%></h3>
             <%=t('post.index.by') + ' ' + c.user.username %>
+            <div class='response'><%=t("post.index.in_response")+' '+p.parent.user.username%></div> 
           </haeder>
           <div class='body'><%=c.body%></div>
           <footer><%=link_to t('post.index.reply'),new_post_with_parent_path(c) %> </footer> 
