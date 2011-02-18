@@ -1,9 +1,5 @@
 class PostsController < ApplicationController
   before_filter :get_parent, :only =>[:new,:create]
-
-  def index
-    @Posts = Post.where(:base=>0)
-  end
 =begin
   def show
     @Post = Post.find(params[:id])

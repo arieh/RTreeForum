@@ -3,7 +3,7 @@ FEDs::Application.routes.draw do
 
   devise_for :users
 
-  root :to => "posts#index"
+  root :to => "index#index"
 
   resource :posts
 

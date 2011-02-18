@@ -9,6 +9,15 @@
   </head>
   <body>
     <div id="container">
+      <header>
+        <h1><%=t('site_name')%></h1>
+        <nav>
+        <%if (!current_user)%>
+          <%=link_to t('log_in'),new_user_session_path%> 
+        <%else%>
+          <%=link_to t('log_out'),destroy_user_session_path%> 
+        <%end%>
+      </header>
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
