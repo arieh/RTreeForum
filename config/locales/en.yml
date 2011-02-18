@@ -3,3 +3,20 @@
 
 en:
   hello: "Hello world"
+  errors:
+    invalid_parent: "Invalid parent id"
+  post:
+    index:
+      title: "Posts"
+      by: "by"
+      new_post: "create a new post"
+      reply: "reply"
+      create_success: "Post was created successfully"
+    new:
+      title: "New Post"
+      fields:
+        title: "Title"
+        body: "Message Body"
+        submit: "Save"
+
+

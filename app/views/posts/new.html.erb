@@ -1,0 +1,15 @@
+<h2><%=t "post.new.title" %></h2>
+<%= form_for @Post do |f|%>
+  <fieldset>
+    <dl>
+      <dt><%=f.label :title, t('post.new.fields.title'),{:value=>@Post.title}%></dt>
+        <dd><%=f.text_field :title%></dd>
+        <dt><%=f.label :body, t('post.new.fields.body'),{:value=>@Post.body}%></dt>
+        <dd><%=f.text_area :body%></dd>
+    </dl>
+    <%=f.submit :submit,{:value =>t("post.new.fields.submit")}%>
+    <%if (@Post.parent_id)%> 
+      <%= hidden_field_tag :parent_id,@Post.parent_id%>
+    <% end%>
+  </fieldset>
+<% end %>
