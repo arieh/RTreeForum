@@ -13,7 +13,7 @@
     </article>
     <ol class='messages'>
     <% p.posts.each do |c| %>
-      <li class='post child' data-parent="<%=c.parent_id%>" id='post<%=p.id%>'>
+      <li class='post child' data-parent="<%=c.parent_id%>" id='post<%=c.id%>'>
         <article>                           
           <header>
             <h3><%=c.title%></h3>

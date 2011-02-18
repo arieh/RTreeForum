@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_filter :get_parent, :only =>[:new,:create]
 
   def index
-    @Posts = Post.all(:base=>0)
+    @Posts = Post.where(:base=>0)
   end
 =begin
   def show
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   end
 =end
   def new
-    @Post = current_user.posts.new
+    @Post = current_user.posts.new(params[:post])
     if (@parent)
       @Post.parent_id = @parent.id
       @Post.base = @parent.base
@@ -27,22 +27,22 @@ class PostsController < ApplicationController
   end
   
   def create  
+    @Post = current_user.posts.new(params[:post])
     if (@parent)
       if (@parent.base == 0) 
         @Post.base = @parent.id
       else
         @Post.base = @parent.base
       end
+      @Post.parent_id = params[:parent_id]
     end
    
     respond_to do |format|
       if @Post.save
-        flash[:notice] = 'Post was successfully created.'
-        format.html { redirect_to :root_url }
-        format.xml  { render :xml => @Post, :status => :created, :location => @Post }
+        flash[:notice] = t 'post.index.create_success'
+        format.html { redirect_to :root }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @Post.errors, :status => :unprocessable_entity }
+        format.html { render :action => "new",:alert=>"error" }
       end
     end
   end
@@ -74,13 +74,9 @@ class PostsController < ApplicationController
 
   protected
     def get_parent
-      @parent = false
-      if (!params[:parent_id]) 
-        return
-      end
-      @parent = Post.find(params[:parent_id])
-      if (!@parent) 
-         redirect_to :root_url, :alert => t ('posts.errors.invalid_parent')
+      @parent = false;
+      if (params[:parent_id])
+        @parent = Post.find(params[:parent_id])
       end
     end
 end

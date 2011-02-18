@@ -2,15 +2,14 @@
 <%= form_for @Post do |f|%>
   <fieldset>
     <dl>
-      <dt><%=f.label :title, t('post.new.fields.title')%></dt>
+      <dt><%=f.label :title, t('post.new.fields.title'),{:value=>@Post.title}%></dt>
         <dd><%=f.text_field :title%></dd>
-      <dt><%=f.label :body, t('post.new.fields.body')%></dt>
+        <dt><%=f.label :body, t('post.new.fields.body'),{:value=>@Post.body}%></dt>
         <dd><%=f.text_area :body%></dd>
     </dl>
-    <%=f.submit :submit,{:value => "post.new.title"}%>
+    <%=f.submit :submit,{:value =>t("post.new.fields.submit")}%>
     <%if (@Post.parent_id)%> 
-      <%= f.hidden_field :parent_id,{:value=>@Post.parent_id}%>
+      <%= hidden_field_tag :parent_id,@Post.parent_id%>
     <% end%>
-    <%=f.hidden_field :base,{:value=>@Post.base}%>
   </fieldset>
 <% end %>
