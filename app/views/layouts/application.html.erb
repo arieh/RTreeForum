@@ -3,12 +3,10 @@
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
     <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag :defaults %>
-    <%= csrf_meta_tag %>
+   <%= csrf_meta_tag %>
     <%= yield(:head) %>
   </head>
   <body>
-    <div id="container">
       <header>
         <h1><%=t('site_name')%></h1>
         <nav>
@@ -19,10 +17,15 @@
         <%end%>
       </header>
       <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <%= content_tag :div, msg, :class=> "flash #{name}" %>
       <% end %>
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
-    </div>
+    <%= javascript_include_tag 'mootools-core-1.3'%>
+    <%= javascript_include_tag 'mootools-more' %>
+    <%= javascript_include_tag 'rails' %>
+    <%= javascript_include_tag 'Post' %>
+    <%= javascript_include_tag 'application' %>
+ 
   </body>
 </html>

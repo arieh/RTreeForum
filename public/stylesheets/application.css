@@ -1,75 +1,185 @@
-body {
-  background-color: #4B7399;
-  font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
+/* line 14, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
 }
 
+/* line 17, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+/* line 19, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 21, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 23, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 25, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: "" "";
+}
+/* line 96, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+/* line 27, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-a {
-  color: #0000FF;
+/* line 108, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  display: block;
 }
 
-.clear {
-  clear: both;
-  height: 0;
+/* line 22, source/application.scss */
+html {
+  background: #aaa;
+}
+
+/* line 23, source/application.scss */
+body {
+  width: 960px;
+  border: 5px solid #ccc;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+}
+
+/* line 31, source/application.scss */
+.flash {
+  width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid;
+}
+
+/* line 37, source/application.scss */
+.flash.notice {
+  background: #b5fea2;
+  color: #375b2d;
+  border-color: #375b2d;
+}
+
+/* line 42, source/application.scss */
+.flash.alert {
+  background: #ff5f5f;
+  color: #690101;
+  border-color: #690101;
+}
+
+/* line 48, source/application.scss */
+.message-list {
+  list-style-type: none;
+}
+
+/* line 51, source/application.scss */
+.post, .base {
+  margin: 5px 0;
+  margin-left: 25px;
+  width: 300px;
+}
+/* line 56, source/application.scss */
+.post h3, .base h3 {
+  font-size: 1.2em;
+}
+/* line 60, source/application.scss */
+.post .handle, .base .handle {
+  text-decoration: underline;
+  cursor: pointer;
+}
+/* line 62, source/application.scss */
+.post header, .base header {
   overflow: hidden;
 }
-
-#container {
-  width: 75%;
-  margin: 0 auto;
-  background-color: #FFF;
-  padding: 20px 40px;
-  border: solid 1px black;
-  margin-top: 20px;
+/* line 63, source/application.scss */
+.post h3, .post cite, .base h3, .base cite {
+  float: left;
+}
+/* line 64, source/application.scss */
+.post cite, .base cite {
+  margin: 0 10px;
+  font-style: italic;
+}
+/* line 65, source/application.scss */
+.post .response, .base .response {
+  clear: both;
+  font-size: 0.9em;
 }
 
-#flash_notice, #flash_error, #flash_alert {
-  padding: 5px 8px;
-  margin: 10px 0;
+/* line 70, source/application.scss */
+.close > article > .body {
+  display: none;
+}
+/* line 72, source/application.scss */
+.close > .reply {
+  display: none;
 }
 
-#flash_notice {
-  background-color: #CFC;
-  border: solid 1px #6C6;
+/* line 76, source/application.scss */
+.open > aritcle > .body {
+  display: block;
+}
+/* line 78, source/application.scss */
+.open > .reply {
+  display: none;
 }
 
-#flash_error, #flash_alert {
-  background-color: #FCC;
-  border: solid 1px #C66;
+/* line 81, source/application.scss */
+.reply {
+  text-align: right;
 }
 
-.fieldWithErrors {
-  display: inline;
+/* line 83, source/application.scss */
+.body {
+  padding: 10px;
 }
 
-.error_messages {
-  width: 400px;
-  border: 2px solid #CF0000;
-  padding: 0px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-  font-size: 12px;
+/* line 87, source/application.scss */
+.base {
+  margin: 15px 0;
 }
-
-.error_messages h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 12px;
-  margin: 0;
-  background-color: #c00;
-  color: #fff;
+/* line 88, source/application.scss */
+.base article {
+  background: #ccc;
 }
-
-.error_messages p {
-  margin: 8px 10px;
-}
-
-.error_messages ul {
-  margin: 0;
+/* line 91, source/application.scss */
+.base .body {
+  border-bottom: 2px solid #666;
+  background: #fff;
 }

@@ -1,30 +1,32 @@
 <%if (current_user) then%>
 <h2><%=t "post.index.title"%></h2>
 
-<ol>
+<ol class='posts message-list'>
 <% @Posts.each do |p| %>
-  <li class='post base' id='post<%=p.id%>'>
+  <li class='base' id='post<%=p.id%>'>
     <article>
       <header>
         <h3><%=p.title%></h3>
-        <%=t('post.index.by') +' '+ p.user.username %>
+        <cite><%=t('post.index.by') +' '+ p.user.username %></cite>
       </header>
-      <div class="body"><%=p.body%></div>
-      <footer><%=link_to t('post.index.reply'),new_post_with_parent_path(p) %> </footer>
+      <div class='body'><%=p.body%></div>
+      <aside class='reply'><%=link_to t('post.index.reply'),new_post_with_parent_path(p) %> </aside>
     </article>
-    <ol class='messages'>
+    <ol class='message-list'>
     <% p.posts.each do |c| %>
-      <li class='post child' data-parent="<%=c.parent_id%>" id='post<%=c.id%>'>
+      <li class='post child close' data-parent="<%=c.parent_id%>" id='post<%=c.id%>'>
         <article>                           
           <header>
-            <h3><%=c.title%></h3>
-            <%=t('post.index.by') + ' ' + c.user.username %>
+            <h3 class="handle"><%=c.title%></h3>
+            <cite><%=t('post.index.by') + ' ' + c.user.username %></cite>
             <div class='response'><%=t("post.index.in_response")+' '+p.parent.user.username%></div> 
           </haeder>
           <div class='body'><%=c.body%></div>
-          <footer><%=link_to t('post.index.reply'),new_post_with_parent_path(c) %> </footer> 
         </article>
-        <ol class='messages'></ol>
+        <aside class="reply"><%=link_to t('post.index.reply'),new_post_with_parent_path(c) %></aside>
+        <aside class="comments">
+          <ol class="message-list"></ol>
+        </aside>  
       </li>
     <%end%>
     </ol>

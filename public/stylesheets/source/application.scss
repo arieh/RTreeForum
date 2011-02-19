@@ -1,0 +1,93 @@
+@import "compass/reset/utilities";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+
+@mixin inline-block{
+	display:inline-block;
+	vertical-align:top;
+	_display:inline;
+	zoom:1;
+}
+
+
+$light_green :  #B5FEA2;
+$dark_green :  #375B2D;
+$light_red : #FF5F5F;
+$dark_red :  #690101;
+
+@include global-reset;
+@include reset-html5;
+
+
+html {background:#aaa}
+body{
+  width:960px;
+  border:5px solid #ccc;
+  margin: 20px auto;
+  background:#fff;
+  padding:20px;
+}
+
+.flash{
+  width:600px;
+  margin:0 auto;
+  padding:10px;
+  border:1px solid;
+}
+.flash.notice{
+  background:$light_green;
+  color:$dark_green;
+  border-color:$dark_green;
+}
+.flash.alert{
+  background:$light_red;
+  color:$dark_red;
+  border-color:$dark_red;
+}
+
+.message-list{
+  list-style-type:none;
+}
+.post,.base{
+  margin:5px 0;
+  margin-left:25px;
+  width:300px;
+
+  h3{
+    font-size:1.2em;
+  }
+
+  .handle{text-decoration:underline; cursor:pointer}
+
+  header{overflow:hidden}
+  h3, cite{float:left}
+  cite{margin:0 10px; font-style:italic}
+  .response {clear:both;font-size:0.9em;}
+}
+
+.close{
+   >article{
+     > .body {display:none}  
+   }
+   >.reply {display:none}
+} 
+.open{
+  >aritcle{
+    >.body{display:block;} 
+  }  
+  >.reply {display:none}
+}
+
+.reply{text-align:right;}
+
+.body{
+  padding:10px;
+}
+
+.base{
+  article{background:#ccc;}
+  margin:15px 0;
+  
+  .body{border-bottom:2px solid #666;background:#fff;}
+
+}
