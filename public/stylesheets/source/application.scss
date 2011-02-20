@@ -9,7 +9,10 @@
 	zoom:1;
 }
 
-
+$dark-blue : #1f4f62;
+$medium-blue : #3d7389;
+$light-blue:#6ba7bf;
+$lighter-blue : #d2e4ec;       
 $light_green :  #B5FEA2;
 $dark_green :  #375B2D;
 $light_red : #FF5F5F;
@@ -19,7 +22,7 @@ $dark_red :  #690101;
 @include reset-html5;
 
 
-html {background:#aaa}
+html {background:#346A96}
 body{
   width:960px;
   border:5px solid #ccc;
@@ -48,46 +51,118 @@ body{
 .message-list{
   list-style-type:none;
 }
+
+.comments{
+  margin-bottom:15px;
+}
+
 .post,.base{
   margin:5px 0;
   margin-left:25px;
-  width:300px;
-
-  h3{
-    font-size:1.2em;
-  }
+  width:400px;
+  position:relative;
 
   .handle{text-decoration:underline; cursor:pointer}
 
-  header{overflow:hidden}
-  h3, cite{float:left}
-  cite{margin:0 10px; font-style:italic}
-  .response {clear:both;font-size:0.9em;}
+  header{
+    line-height:20px;
+    vertical-align:baseline;
+    font-size:17px;
+    padding-left:5px;
+    min-height:40px;
+  }
+
+  h3, cite{
+    @include inline-block;
+  }
+  cite{margin:0 10px; font-style:italic; font-size:13px;}
+  .response {;font-size:13px;height:20px;}
+  .avatar{
+    display:block;
+    position:absolute;
+  }
+  
+  .posted_at{
+    font-size:13px;
+    float:right;
+    padding-right:5px;
+  }
 }
 
+.base{
+  padding-left:80px;
+  padding-top:5px;
+  >article>header{
+    line-height:30px;
+    h3{font-size:20px;}
+  }
+  .avatar{
+    left:5px;
+    top:5px;
+  }
+}
+
+.post{
+  padding-left:44px;
+  padding-top:2px;
+  .avatar{
+    left:2px;
+    top:2px;
+  }
+}
 .close{
    >article{
      > .body {display:none}  
+     >.reply {display:none}
    }
-   >.reply {display:none}
 } 
 .open{
   >aritcle{
     >.body{display:block;} 
+    >.reply {display:block}
   }  
-  >.reply {display:none}
+}
+a,a:visited{text-decoration:none; color:blue}
+header.main{
+  background:$lighter_blue;
+  .title{
+    font-size:4em;
+    margin-bottom:15px; 
+    padding:5px;
+  }
+
+  nav{
+    border-bottom:3px solid $medium_blue;
+    margin-bottom:10px;
+    background:$light_blue;
+    color:#fff;
+    height:20px;
+    line-height:20px;
+    padding:3px 8px;
+    vertical-align:middle;
+
+    a, a:visited{color:#fff; font-weight:bold;}
+
+  }
 }
 
-.reply{text-align:right;}
+h1{
+  font-size:2em;
+  font-weight:bold;
+}
+
+.reply{text-align:right;font-size:13px;height:18px;padding-right:5px;}
 
 .body{
   padding:10px;
+  margin:2px 5px;
+  background:$lighter_blue;
 }
 
 .base{
-  article{background:#ccc;}
-  margin:15px 0;
-  
-  .body{border-bottom:2px solid #666;background:#fff;}
+  article{
+    background:$light_blue;
+  }
 
+  margin:15px 0;
 }

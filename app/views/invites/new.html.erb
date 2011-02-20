@@ -1,0 +1,9 @@
+<h2><%=t('invites.new.title')%></h2>
+<%=form_for @Invite do |f|%>
+  <fieldset>
+  <dl>
+    <dt><%=f.label :email, t('invites.new.email')%></dt>
+    <dd><%=f.text_field :email%></dd>
+  </dl>
+  <%=f.submit :submit,{:value=>t('invites.new.submit')}%>
+<%end%>
