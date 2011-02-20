@@ -67,12 +67,12 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   display: block;
 }
 
-/* line 22, source/application.scss */
+/* line 25, source/application.scss */
 html {
-  background: #aaa;
+  background: #346A96;
 }
 
-/* line 23, source/application.scss */
+/* line 26, source/application.scss */
 body {
   width: 960px;
   border: 5px solid #ccc;
@@ -81,7 +81,7 @@ body {
   padding: 20px;
 }
 
-/* line 31, source/application.scss */
+/* line 34, source/application.scss */
 .flash {
   width: 600px;
   margin: 0 auto;
@@ -89,97 +89,187 @@ body {
   border: 1px solid;
 }
 
-/* line 37, source/application.scss */
+/* line 40, source/application.scss */
 .flash.notice {
   background: #b5fea2;
   color: #375b2d;
   border-color: #375b2d;
 }
 
-/* line 42, source/application.scss */
+/* line 45, source/application.scss */
 .flash.alert {
   background: #ff5f5f;
   color: #690101;
   border-color: #690101;
 }
 
-/* line 48, source/application.scss */
+/* line 51, source/application.scss */
 .message-list {
   list-style-type: none;
 }
 
-/* line 51, source/application.scss */
+/* line 55, source/application.scss */
+.comments {
+  margin-bottom: 15px;
+}
+
+/* line 59, source/application.scss */
 .post, .base {
   margin: 5px 0;
   margin-left: 25px;
-  width: 300px;
+  width: 400px;
+  position: relative;
 }
-/* line 56, source/application.scss */
-.post h3, .base h3 {
-  font-size: 1.2em;
-}
-/* line 60, source/application.scss */
+/* line 65, source/application.scss */
 .post .handle, .base .handle {
   text-decoration: underline;
   cursor: pointer;
 }
-/* line 62, source/application.scss */
+/* line 67, source/application.scss */
 .post header, .base header {
-  overflow: hidden;
+  line-height: 20px;
+  vertical-align: baseline;
+  font-size: 17px;
+  padding-left: 5px;
+  min-height: 40px;
 }
-/* line 63, source/application.scss */
+/* line 75, source/application.scss */
 .post h3, .post cite, .base h3, .base cite {
-  float: left;
+  display: inline-block;
+  vertical-align: top;
+  _display: inline;
+  zoom: 1;
 }
-/* line 64, source/application.scss */
+/* line 78, source/application.scss */
 .post cite, .base cite {
   margin: 0 10px;
   font-style: italic;
+  font-size: 13px;
 }
-/* line 65, source/application.scss */
+/* line 79, source/application.scss */
 .post .response, .base .response {
-  clear: both;
-  font-size: 0.9em;
+  font-size: 13px;
+  height: 20px;
+}
+/* line 80, source/application.scss */
+.post .avatar, .base .avatar {
+  display: block;
+  position: absolute;
+}
+/* line 85, source/application.scss */
+.post .posted_at, .base .posted_at {
+  font-size: 13px;
+  float: right;
+  padding-right: 5px;
 }
 
-/* line 70, source/application.scss */
+/* line 92, source/application.scss */
+.base {
+  padding-left: 80px;
+  padding-top: 5px;
+}
+/* line 95, source/application.scss */
+.base > article > header {
+  line-height: 30px;
+}
+/* line 97, source/application.scss */
+.base > article > header h3 {
+  font-size: 20px;
+}
+/* line 99, source/application.scss */
+.base .avatar {
+  left: 5px;
+  top: 5px;
+}
+
+/* line 105, source/application.scss */
+.post {
+  padding-left: 44px;
+  padding-top: 2px;
+}
+/* line 108, source/application.scss */
+.post .avatar {
+  left: 2px;
+  top: 2px;
+}
+
+/* line 115, source/application.scss */
 .close > article > .body {
   display: none;
 }
-/* line 72, source/application.scss */
-.close > .reply {
+/* line 116, source/application.scss */
+.close > article > .reply {
   display: none;
 }
 
-/* line 76, source/application.scss */
+/* line 121, source/application.scss */
 .open > aritcle > .body {
   display: block;
 }
-/* line 78, source/application.scss */
-.open > .reply {
-  display: none;
+/* line 122, source/application.scss */
+.open > aritcle > .reply {
+  display: block;
 }
 
-/* line 81, source/application.scss */
+/* line 125, source/application.scss */
+a, a:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+/* line 126, source/application.scss */
+header.main {
+  background: #d2e4ec;
+}
+/* line 128, source/application.scss */
+header.main .title {
+  font-size: 4em;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+/* line 134, source/application.scss */
+header.main nav {
+  border-bottom: 3px solid #3d7389;
+  margin-bottom: 10px;
+  background: #6ba7bf;
+  color: #fff;
+  height: 20px;
+  line-height: 20px;
+  padding: 3px 8px;
+  vertical-align: middle;
+}
+/* line 144, source/application.scss */
+header.main nav a, header.main nav a:visited {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* line 149, source/application.scss */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* line 154, source/application.scss */
 .reply {
   text-align: right;
+  font-size: 13px;
+  height: 18px;
+  padding-right: 5px;
 }
 
-/* line 83, source/application.scss */
+/* line 156, source/application.scss */
 .body {
   padding: 10px;
+  margin: 2px 5px;
+  background: #d2e4ec;
 }
 
-/* line 87, source/application.scss */
+/* line 162, source/application.scss */
 .base {
   margin: 15px 0;
 }
-/* line 88, source/application.scss */
+/* line 163, source/application.scss */
 .base article {
-  background: #ccc;
-}
-/* line 91, source/application.scss */
-.base .body {
-  border-bottom: 2px solid #666;
-  background: #fff;
+  background: #6ba7bf;
 }
