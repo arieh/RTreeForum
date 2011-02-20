@@ -10,6 +10,7 @@ gem 'nifty-generators'
 gem 'devise'
 gem 'rspec'
 gem 'compass'
+gem 'devise_invitable'
 
 # Use unicorn as the web server
 # gem 'unicorn'

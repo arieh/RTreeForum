@@ -1,13 +1,23 @@
 FEDs::Application.routes.draw do
+  get "invites/new"
+
+  get "invites/create"
+
+  get "invites/validate"
+
   get "index/index"
 
   devise_for :users
 
   root :to => "index#index"
 
-  resource :posts
+  resource :posts, :invites
 
-  match '/posts/new/:parent_id', :controller=>'posts', :action=>'new', :defaults => {:parent_id => false}, :as => :new_post_with_parent
+  match '/page/:start'=>'index#index',:start=>/\d+/,:defaults=>{:start=>0}, :as => :posts_page
+
+  match '/posts/new/:parent_id' => 'posts#new', :defaults => {:parent_id => false}, :as => :new_post_with_parent
+
+  match '/invites/validate/:email/:key' => 'invites#validate'
   # The priority is based upon order of creation:
   #
   # first created -> highest priority.

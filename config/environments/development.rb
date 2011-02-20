@@ -23,5 +23,12 @@ FEDs::Application.configure do
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  ActionMailer::Base.smtp_settings = {
+     :address => "mail.arieh.co.il",
+     :domain => "mail.arieh.co.il",
+     :user_name => "feds@arieh.co.il",
+     :password => "rjntqvzz",
+  }
+
 end
 

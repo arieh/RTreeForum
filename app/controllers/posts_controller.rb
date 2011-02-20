@@ -31,6 +31,9 @@ class PostsController < ApplicationController
         @Post.base = @parent.base
       end
       @Post.parent_id = params[:parent_id]
+      base = Post.find(@Post.base)
+      base.updated_at = 0.days.from_now!
+      base.save
     end
    
     respond_to do |format|
