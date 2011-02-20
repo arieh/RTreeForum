@@ -1,0 +1,14 @@
+<%= form_for @new_post,{:remote=>true,:html=>{:id=>''}} do |f|%>
+  <fieldset>
+    <dl>
+      <dt><%=f.label :title, t('post.new.fields.title'),{:value=>@new_post.title,:id=>''}%></dt>
+        <dd><%=f.text_field :title%></dd>
+        <dt><%=f.label :body, t('post.new.fields.body'),{:value=>@new_post.body,:id=>''}%></dt>
+        <dd><%=f.text_area :body%></dd>
+    </dl>
+    <%=f.submit :submit,{:value =>t("post.new.fields.submit"),:id=>''}%>
+    <%if (@parent)%> 
+      <%= hidden_field_tag :parent_id,@parent,{:id=>''}%>
+    <% end%>
+  </fieldset>
+<% end %> 

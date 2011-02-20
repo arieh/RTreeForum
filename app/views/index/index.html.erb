@@ -12,7 +12,10 @@
         <time class='posted_at' datetime="<%=p.updated_at.to_s%>"><%=p.updated_at.strftime("%e/%m/%y - %H:%M")%></time>
       </header>
       <div class='body'><%=p.body%></div>
-      <aside class='reply'><%=link_to t('post.index.reply'),new_post_with_parent_path(p) %> </aside>
+      <aside class='reply'>
+        <span class='reply'><%=t('post.index.reply')%></span>
+        <%= render :partial => 'posts/new_post',:locals =>{:new_post => @new_post,:parent =>p.id}%>
+      </aside>
     </article>
     <ol class='message-list'>
     <% p.posts.each do |c| %>
@@ -38,4 +41,6 @@
 <% end %>
 </ol>
 <%=link_to t('post.index.new_post'),new_posts_url%>
+<h2><%=t('post.index.new_post')%></h2>
+<%= render :partial => 'posts/new_post',:locals =>{:new_post => @new_post,:parent =>false}%>
 <%end%>
