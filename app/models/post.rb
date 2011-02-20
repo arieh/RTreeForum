@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
   has_many :posts, :class_name => "Post",
     :foreign_key => "base"
-  belongs_to :base, :class_name => "Post"
+  belongs_to :base_post, :class_name => "Post", :foreign_key=>'base'
   
   has_one :parent, :class_name =>"Post", :foreign_key =>"parent_id"
 
