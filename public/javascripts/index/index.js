@@ -12,6 +12,6 @@ Object.each(posts,function(post){
 $$('.posts')[0].delegateEvent('click',{
    '.reply span' : function (e){
       var target = $(e.target);
-      target.getNext('form').setStyle('display','block');
+      target.getNext('form').toggle();
    }
 });
