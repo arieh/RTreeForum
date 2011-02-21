@@ -5,7 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       t.integer :user_id
       t.text :body
       t.integer :parent_id
-      t.boolean :base
+      t.integer :base, :default=>0
 
       t.timestamps
     end
