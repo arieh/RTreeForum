@@ -12,6 +12,7 @@ gem 'rspec'
 gem 'compass'
 gem 'devise_invitable'
 gem 'jammit'
+gem 'pg'
 # Use unicorn as the web server
 # gem 'unicorn'
 

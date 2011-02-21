@@ -4,3 +4,12 @@ javascripts:
     - public/javascripts/base/mootools-more.js
     - public/javascripts/base/*.js
     - public/javascripts/index/*.js
+  sessions:
+    - public/javascripts/base/mootools-core-1.3.js
+    - public/javascripts/base/mootools-more.js
+    - public/javascripts/base/*.js      
+  registrations:
+    - public/javascripts/base/mootools-core-1.3.js
+    - public/javascripts/base/mootools-more.js
+    - public/javascripts/base/*.js      
+ 
