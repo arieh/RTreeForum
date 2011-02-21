@@ -1,7 +1,11 @@
-var posts = {};
-$$('.post').each(function(el){
+var posts = {}
+  , new_post = $('new-post').dispose().setStyles({
+    'visibility':'visible'
+    , 'position' : 'relative'
+  });
+$$('.post,.base').each(function(el){
   var id = el.id.substr(4);
-  posts[id] = new Post(el);
+  posts[id] = el.hasClass('base') ? new BPost(el) : new Post(el);
   el.store('Post',posts[id]);
 });                      
 
@@ -14,4 +18,8 @@ $$('.posts')[0].delegateEvent('click',{
       var target = $(e.target);
       target.getNext('form').toggle();
    }
+});
+$('new-post-button').addEvent('click',function(e){
+   e.preventDefault();
+   var box = new FloatBox(new_post,{size:{x:300,y:300}});
 });

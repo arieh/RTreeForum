@@ -11,9 +11,13 @@
     <%end%>
   </header>
   <div class='body'><%=post.body%></div>
-  <aside class='reply'>
-    <span class='reply'><%=t('post.index.reply')%></span>
-    <%= render :partial => 'posts/new_post' %>
-  </aside>
+  <% if (@new_post) %>
+    <aside class='reply'>
+      <span class='reply'><%=t('post.index.reply')%></span>
+      <%= render :partial => 'posts/new_post',:locals=>{:post=>@new_post,:parent=>post.id} %>
+    </aside>
+  <%else%>
+    <aside class='reply'></aside>
+  <%end %>
 </article>
 

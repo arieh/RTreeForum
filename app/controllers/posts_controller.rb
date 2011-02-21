@@ -33,12 +33,13 @@ class PostsController < ApplicationController
       @Post.parent_id = params[:parent_id]
       @Post.base_post.updated_at = Time.new
       @Post.base_post.save
+
     end
    
     respond_to do |format|
       if @Post.save
-        flash[:notice] = t 'post.index.create_success'
-        format.html { redirect_to :root }
+        format.html { redirect_to :root, :notice =>  t('post.index.create_success') }
+        format.js
       else
         format.html { render :action => "new",:alert=>"error" }
       end

@@ -258,22 +258,96 @@ h1 {
   min-height: 18px;
 }
 /* line 161, source/application.scss */
+.reply .reply {
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* line 163, source/application.scss */
+.reply label {
+  line-height: 20px;
+  text-align: right;
+  width: 90px;
+  left: -90px;
+  position: absolute;
+  font-size: 12px;
+}
+/* line 165, source/application.scss */
 .reply form {
   display: none;
+  text-align: center;
+  height: 155px;
+  position: relative;
+  margin: 5px;
+  width: 300px;
+  margin-left: 90px;
+}
+/* line 174, source/application.scss */
+.reply form textarea, .reply form input {
+  width: 95%;
+  margin: 0 auto;
+}
+/* line 175, source/application.scss */
+.reply form input[type=submit] {
+  width: 295px;
+}
+/* line 176, source/application.scss */
+.reply form textarea {
+  height: 100px;
 }
 
-/* line 167, source/application.scss */
+/* line 183, source/application.scss */
 .body {
   padding: 10px;
   margin: 2px 5px;
   background: #d2e4ec;
 }
 
-/* line 173, source/application.scss */
+/* line 189, source/application.scss */
 .base {
   margin: 15px 0;
 }
-/* line 174, source/application.scss */
+/* line 190, source/application.scss */
 .base article {
   background: #6ba7bf;
+}
+
+/* line 197, source/application.scss */
+h2 {
+  font-size: 20px;
+}
+
+/* line 199, source/application.scss */
+#new-post {
+  visibility: hidden;
+  position: absolute;
+}
+/* line 202, source/application.scss */
+#new-post form {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  position: relative;
+}
+/* line 209, source/application.scss */
+#new-post h2 {
+  text-transform: capitalize;
+  text-align: center;
+}
+/* line 214, source/application.scss */
+#new-post label {
+  text-align: left;
+  height: 18px;
+}
+/* line 219, source/application.scss */
+#new-post input, #new-post textarea, #new-post label {
+  width: 250px;
+  margin: 0 auto;
+}
+/* line 224, source/application.scss */
+#new-post textarea {
+  height: 200px;
+}
+/* line 228, source/application.scss */
+#new-post input[type=submit] {
+  width: 200px;
 }

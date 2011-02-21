@@ -158,8 +158,24 @@ h1{
   padding-right:5px;
   min-height:18px;
 
+  .reply{cursor:pointer; text-decoration:underline}
+
+  label{line-height:20px;text-align:right; width:90px; left:-90px;position:absolute; font-size:12px;}
+
   form {
-    display:none
+    display:none;
+    text-align:center;
+    height:155px;
+    position:relative;
+    margin:5px;
+    width:300px;
+    margin-left:90px;
+
+    textarea,input{width:95%; margin:0 auto;}
+    input[type=submit]{width:295px}
+    textarea {
+      height:100px;
+    }
   }
 
 }
@@ -177,3 +193,40 @@ h1{
 
   margin:15px 0;
 }
+
+h2 {font-size:20px;}
+
+#new-post{
+  visibility:hidden;
+  position:absolute;
+  form{
+    width:300px;
+    height:300px;
+    text-align:center;
+    position:relative;
+  }
+
+  h2{
+    text-transform:capitalize;
+    text-align:center;
+  }
+
+  label {
+    text-align:left;
+    height:18px;
+  }
+
+  input,textarea, label{
+    width:250px;
+    margin:0 auto;
+  }
+
+  textarea{
+    height:200px;
+  }
+
+  input[type=submit]{
+    width:200px;
+  }
+}
+

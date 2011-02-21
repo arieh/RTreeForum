@@ -1,6 +1,6 @@
 <%if (current_user) then%>
 <h1><%=t "post.index.title"%></h1>
-
+<%=link_to t('post.index.new_post'),new_posts_url,{:id=>'new-post-button'}%>
 <ol class='posts message-list'>
 <% @Posts.each do |p| %>
   <li class='base' id='post<%=p.id%>'>
@@ -18,7 +18,8 @@
   </li>
 <% end %>
 </ol>
-<%=link_to t('post.index.new_post'),new_posts_url%>
+<aside id='new-post'>
 <h2><%=t('post.index.new_post')%></h2>
 <%= render :partial => 'posts/new_post',:locals =>{:new_post => @new_post,:parent =>false}%>
+</aside>
 <%end%>

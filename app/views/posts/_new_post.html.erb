@@ -7,8 +7,8 @@
         <dd><%=f.text_area :body%></dd>
     </dl>
     <%=f.submit :submit,{:value =>t("post.new.fields.submit"),:id=>''}%>
-    <%if (@parent)%> 
-      <%= hidden_field_tag :parent_id,@parent,{:id=>''}%>
+    <%if (parent)%> 
+      <%= hidden_field_tag :parent_id,parent,{:id=>''}%>
     <% end%>
   </fieldset>
 <% end %> 

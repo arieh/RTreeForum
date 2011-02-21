@@ -54,4 +54,14 @@ var Post = this.Post = new Class({
     , toElement: function toElement(){ return this.post;}
 });
 
+var BPost = this.BPost = new Class({
+  initialize : function initialize(el){
+    this.element = $(el);
+    this.list = this.element.getElement('.message-list');
+  }
+  , addChild: function addChild(el){
+    this.list.adopt(el);  
+  }
+  , toElement : function toElement(){return this.element;}
+});
 }).apply(this,[document.id]);
