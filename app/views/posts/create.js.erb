@@ -1,0 +1,20 @@
+<% html = escape_javascript render :partial => 'index/post', :locals => {:post=>@Post, :base => (@Post.base==0)} %>
+var post = posts[<%=@Post.id%>] = 
+  new <%=@Post.base ? 'Post' : 'BPost'%>(new Element('li',{
+    html:'<%=html%>'
+    , id:'post<%=@Post.id%>'
+  }))
+  , parent = posts[<%=@Post.parent_id%>]
+  , first = $$('.posts li:first-child')[0]
+  , base = $(posts[<%=@Post.base%>]);
+
+if (!parent){
+  $(post).addClass('base').inject(first,'before');
+}else{
+  parent.addChild(post);  
+  $(post).addClass('post').addClass('close');
+  if (base != first) base.inject(first,'before');
+}  
+
+
+$$('#post<%=@Post.parent_id%> form')[0].toggle();

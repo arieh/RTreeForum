@@ -1,0 +1,353 @@
+/* line 14, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 17, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+/* line 19, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 21, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 23, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 25, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: "" "";
+}
+/* line 96, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+/* line 27, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 108, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  display: block;
+}
+
+/* line 25, source/application.scss */
+html {
+  background: #346A96;
+}
+
+/* line 26, source/application.scss */
+body {
+  width: 960px;
+  border: 5px solid #ccc;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+}
+
+/* line 34, source/application.scss */
+.flash {
+  width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid;
+}
+
+/* line 40, source/application.scss */
+.flash.notice {
+  background: #b5fea2;
+  color: #375b2d;
+  border-color: #375b2d;
+}
+
+/* line 45, source/application.scss */
+.flash.alert {
+  background: #ff5f5f;
+  color: #690101;
+  border-color: #690101;
+}
+
+/* line 51, source/application.scss */
+.message-list {
+  list-style-type: none;
+}
+
+/* line 55, source/application.scss */
+.comments {
+  margin-bottom: 15px;
+}
+
+/* line 59, source/application.scss */
+.post, .base {
+  margin: 5px 0;
+  margin-left: 25px;
+  width: 400px;
+  position: relative;
+}
+/* line 65, source/application.scss */
+.post .handle, .base .handle {
+  text-decoration: underline;
+  cursor: pointer;
+}
+/* line 67, source/application.scss */
+.post header, .base header {
+  line-height: 20px;
+  vertical-align: baseline;
+  font-size: 17px;
+  padding-left: 5px;
+  min-height: 40px;
+}
+/* line 75, source/application.scss */
+.post h3, .post cite, .base h3, .base cite {
+  display: inline-block;
+  vertical-align: top;
+  _display: inline;
+  zoom: 1;
+}
+/* line 78, source/application.scss */
+.post cite, .base cite {
+  margin: 0 10px;
+  font-style: italic;
+  font-size: 13px;
+}
+/* line 79, source/application.scss */
+.post .response, .base .response {
+  font-size: 13px;
+  height: 20px;
+}
+/* line 80, source/application.scss */
+.post .avatar, .base .avatar {
+  display: block;
+  position: absolute;
+}
+/* line 85, source/application.scss */
+.post .posted_at, .base .posted_at {
+  font-size: 13px;
+  float: right;
+  padding-right: 5px;
+}
+
+/* line 93, source/application.scss */
+.base {
+  padding-left: 80px;
+  padding-top: 5px;
+}
+/* line 96, source/application.scss */
+.base > article > header {
+  line-height: 30px;
+}
+/* line 98, source/application.scss */
+.base > article > header h3 {
+  font-size: 20px;
+}
+/* line 100, source/application.scss */
+.base .avatar {
+  left: 5px;
+  top: 5px;
+}
+
+/* line 106, source/application.scss */
+.post {
+  padding-left: 44px;
+  padding-top: 2px;
+}
+/* line 109, source/application.scss */
+.post .avatar {
+  left: 2px;
+  top: 2px;
+}
+
+/* line 116, source/application.scss */
+.close > article > .body {
+  display: none;
+}
+/* line 117, source/application.scss */
+.close > article > .reply {
+  display: none;
+}
+
+/* line 122, source/application.scss */
+.open > aritcle > .body {
+  display: block;
+}
+/* line 123, source/application.scss */
+.open > aritcle > .reply {
+  display: block;
+}
+
+/* line 126, source/application.scss */
+a, a:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+/* line 127, source/application.scss */
+header.main {
+  background: #d2e4ec;
+}
+/* line 129, source/application.scss */
+header.main .title {
+  font-size: 4em;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+/* line 135, source/application.scss */
+header.main nav {
+  border-bottom: 3px solid #3d7389;
+  margin-bottom: 10px;
+  background: #6ba7bf;
+  color: #fff;
+  height: 20px;
+  line-height: 20px;
+  padding: 3px 8px;
+  vertical-align: middle;
+}
+/* line 145, source/application.scss */
+header.main nav a, header.main nav a:visited {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* line 150, source/application.scss */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* line 155, source/application.scss */
+.reply {
+  text-align: right;
+  font-size: 13px;
+  padding-right: 5px;
+  min-height: 18px;
+}
+/* line 161, source/application.scss */
+.reply .reply {
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* line 163, source/application.scss */
+.reply label {
+  line-height: 20px;
+  text-align: right;
+  width: 90px;
+  left: -90px;
+  position: absolute;
+  font-size: 12px;
+}
+/* line 165, source/application.scss */
+.reply form {
+  display: none;
+  text-align: center;
+  height: 155px;
+  position: relative;
+  margin: 5px;
+  width: 300px;
+  margin-left: 90px;
+}
+/* line 174, source/application.scss */
+.reply form textarea, .reply form input {
+  width: 95%;
+  margin: 0 auto;
+}
+/* line 175, source/application.scss */
+.reply form input[type=submit] {
+  width: 295px;
+}
+/* line 176, source/application.scss */
+.reply form textarea {
+  height: 100px;
+}
+
+/* line 183, source/application.scss */
+.body {
+  padding: 10px;
+  margin: 2px 5px;
+  background: #d2e4ec;
+}
+
+/* line 189, source/application.scss */
+.base {
+  margin: 15px 0;
+}
+/* line 190, source/application.scss */
+.base article {
+  background: #6ba7bf;
+}
+
+/* line 197, source/application.scss */
+h2 {
+  font-size: 20px;
+}
+
+/* line 199, source/application.scss */
+#new-post {
+  visibility: hidden;
+  position: absolute;
+}
+/* line 202, source/application.scss */
+#new-post form {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  position: relative;
+}
+/* line 209, source/application.scss */
+#new-post h2 {
+  text-transform: capitalize;
+  text-align: center;
+}
+/* line 214, source/application.scss */
+#new-post label {
+  text-align: left;
+  height: 18px;
+}
+/* line 219, source/application.scss */
+#new-post input, #new-post textarea, #new-post label {
+  width: 250px;
+  margin: 0 auto;
+}
+/* line 224, source/application.scss */
+#new-post textarea {
+  height: 200px;
+}
+/* line 228, source/application.scss */
+#new-post input[type=submit] {
+  width: 200px;
+}

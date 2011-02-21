@@ -1,0 +1,8 @@
+var html = "<form action='<%=posts_url%>' method='post'>"
+  +"<fieldset>"
+  +"<label><span><%=t('posts.new.fields.title')%></span><input type='text' name='post[title]' /></label>"
+  +"<label for='new_post_body'><span><%=t('posts.new.fields.body')%></span></label>"
+  +"<textarea cols='60' rows='20' id='new_post_body' name='post[body]'></textarea>"
+  +"<fieldset></form>"
+  , div = new Element('div',{html:html})
+  , box = new FloatBox(div);
