@@ -4,33 +4,11 @@
 <ol class='posts message-list'>
 <% @Posts.each do |p| %>
   <li class='base' id='post<%=p.id%>'>
-    <article>
-      <header>
-        <img src="http://www.gravatar.com/avatar/<%=Digest::MD5.hexdigest(p.user.email.downcase)%>`?d=identicon&amp;s=70" height='70' width='70' alt="<%=p.user.username%>" class='avatar'/>
-        <h3><%=p.title%></h3>
-        <cite><%=t('post.index.by') +' '+ p.user.username %></cite>
-        <time class='posted_at' datetime="<%=p.updated_at.to_s%>"><%=p.updated_at.strftime("%e/%m/%y - %H:%M")%></time>
-      </header>
-      <div class='body'><%=p.body%></div>
-      <aside class='reply'>
-        <span class='reply'><%=t('post.index.reply')%></span>
-        <%= render :partial => 'posts/new_post',:locals =>{:new_post => @new_post,:parent =>p.id}%>
-      </aside>
-    </article>
+    <%= render :partial => 'post' , :locals => {:post=>p,:base=>true}%>
     <ol class='message-list'>
     <% p.posts.each do |c| %>
       <li class='post child close' data-parent="<%=c.parent_id%>" id='post<%=c.id%>'>
-        <article>                           
-          <header>
-          <img src="http://www.gravatar.com/avatar/<%=Digest::MD5.hexdigest(c.user.email.downcase)%>`?d=identicon&amp;s=40" height='40' width='40' alt="<%=p.user.username%>" class='avatar'/>
-          <h3 class="handle"><%=c.title%></h3>
-            <cite><%=t('post.index.by') + ' ' + c.user.username %></cite>
-            <time class='posted_at' datetime="<%=c.updated_at.to_s%>"><%=c.updated_at.strftime("%e/%m/%y - %H:%M")%></time>
-            <div class='response'><%=t("post.index.in_response")+' '+p.parent.user.username%></div> 
-          </haeder>
-          <div class='body'><%=c.body%></div>
-          <aside class="reply"><%=link_to t('post.index.reply'),new_post_with_parent_path(c) %></aside>
-        </article>
+        <%= render :partial => 'post' , :locals => {:post=>c, :base=>false} %>
         <aside class="comments">
           <ol class="message-list"></ol>
         </aside>  
