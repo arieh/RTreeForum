@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <title><%=t('invite_mailer.new.title')%></title>
+  
+</head>
+<body>
+  <h1><%=t('invite_mailer.new.title')%></h1>
+  <p><%=t('invite_mailer.new.welcome_text') +' '+ @Invite.user.username%></p>
+  <%=link_to t('invite_mailer.new.go_here_to_begin'), invites_validate_url(:email=>@Invite.email,:key=>@Invite.key) %>
+</body>
+</html>

@@ -1,0 +1,27 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  log_in: "Log in"
+  log_out: "Log out"
+  site_name: "FEDs"
+  index:
+    not_logged_in: "You must be signed in to view this site's content"
+  errors:
+    invalid_parent: "Invalid parent id"
+  post:
+    index:
+      title: "Posts"
+      by: "by"
+      new_post: "create a new post"
+      reply: "reply"
+      create_success: "Post was created successfully"
+      in_response: "In response to"
+    new:
+      title: "New Post"
+      fields:
+        title: "Title"
+        body: "Message Body"
+        submit: "Save"
+
+
