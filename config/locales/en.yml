@@ -6,8 +6,7 @@ en:
   invite: "Invite new user"
   log_out: "Log out"
   site_name: "FEDs"
-  index:
-    not_logged_in: "You must be signed in to view this site's content"
+  not_logged_in: "You must be signed in to view this site's content"
   errors:
     invalid_parent: "Invalid parent id"
   post:
@@ -24,5 +23,16 @@ en:
         title: "Title"
         body: "Message Body"
         submit: "Save"
+    account:
+      edit:
+        title: 'Edit Account'
+        username: 'User Name'
+        pass: 'New password'
+        pass_leave_blank: 'Leave this field empty if you do not which to change password'
+        rpass: 'Confirm new password'
+        opass: 'Old password'
+        opass_why: 'We need this only if you change your password'
+        submit: 'Save changes'
+        
 
 
