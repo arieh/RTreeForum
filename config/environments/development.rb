@@ -29,6 +29,8 @@ FEDs::Application.configure do
      :user_name => "feds@arieh.co.il",
      :password => "rjntqvzz",
   }
-
+  
+  @log = Logger.new(STDOUT)
+  @log.level = Logger::INFO
 end
 

@@ -1,6 +1,6 @@
 <%if (current_user) then%>
+
 <h1><%=t "post.index.title"%></h1>
-<%=link_to t('post.index.new_post'),new_posts_url,{:id=>'new-post-button'}%>
 <ol class='posts message-list'>
 <% @Posts.each do |p| %>
   <li class='base' id='post<%=p.id%>'>
@@ -18,6 +18,17 @@
   </li>
 <% end %>
 </ol>
+<%if (@count>@per_page)%>
+<nav id='paging'>
+ <ol>
+  <% @pages.times do |p|%>
+    <li class='page <%=(p == @start) ? 'current' : ''%>'>
+      <%= link_to p+1,posts_page_path(p) %>
+    </li>
+  <% end%>
+  </ol>
+</nav>
+<%end%>
 <aside id='new-post'>
 <h2><%=t('post.index.new_post')%></h2>
 <%= render :partial => 'posts/new_post',:locals =>{:new_post => @new_post,:parent =>false}%>

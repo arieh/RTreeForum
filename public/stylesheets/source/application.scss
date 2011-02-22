@@ -47,7 +47,15 @@ body{
   color:$dark_red;
   border-color:$dark_red;
 }
+ 
+nav{
+  ol,ul{text-align:center;}
 
+
+  li{display:inline-block;}
+  li.current{font-weight:bold; text-decoration:underline}
+}
+  
 .message-list{
   list-style-type:none;
 }
@@ -144,6 +152,21 @@ header.main{
 
     a, a:visited{color:#fff; font-weight:bold;}
 
+    ul{text-align:left;}
+    
+    li {
+      margin-right:10px;
+      text-transform: capitalize;
+      height:15px;
+      line-height:15px;
+      border-left:2px solid #fff; 
+      padding-left:10px;
+    }
+    
+    li:first-child {
+      border:0
+    } 
+
   }
 }
 
@@ -230,3 +253,8 @@ h2 {font-size:20px;}
   }
 }
 
+#paging ol{
+  font-size:13px;
+  margin-top:20px;
+ 
+}
