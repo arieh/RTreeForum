@@ -33,7 +33,6 @@
       <% end %>
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
-    <%= include_javascripts controller_name%>
-    
+    <%= include_javascripts :common ,controller_name%>
   </body>
 </html>
