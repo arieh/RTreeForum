@@ -31,6 +31,29 @@ body{
   padding:20px;
 }
 
+label {
+  display: block;
+  width:90px;
+  position:absolute;
+  left:0px;
+  text-align:right;
+}
+
+label.cb{
+  display:inline;
+  width:auto;
+  position:relative;
+  text-align:left;
+}
+h2{
+  margin-bottom:15px;
+}
+input[type=text],input[type=password],input[type=submit]{display:block}
+
+form {
+  position:relative;
+  padding-left:95px;
+}
 .flash{
   width:600px;
   margin:0 auto;
