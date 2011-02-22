@@ -31,6 +31,29 @@ body{
   padding:20px;
 }
 
+label {
+  display: block;
+  width:90px;
+  position:absolute;
+  left:0px;
+  text-align:right;
+}
+
+label.cb{
+  display:inline;
+  width:auto;
+  position:relative;
+  text-align:left;
+}
+h2{
+  margin-bottom:15px;
+}
+input[type=text],input[type=password],input[type=submit]{display:block}
+
+form {
+  position:relative;
+  padding-left:95px;
+}
 .flash{
   width:600px;
   margin:0 auto;
@@ -138,6 +161,7 @@ header.main{
     font-size:4em;
     margin-bottom:15px; 
     padding:5px;
+    color:#666;
   }
 
   nav{
@@ -173,6 +197,7 @@ header.main{
 h1{
   font-size:2em;
   font-weight:bold;
+  margin-bottom:15px;
 }
 
 .reply{
@@ -257,4 +282,26 @@ h2 {font-size:20px;}
   font-size:13px;
   margin-top:20px;
  
+}
+
+
+#user_edit{
+    padding-left:155px;
+
+  label{
+    width:150px;
+    font-size:13px;
+  }
+
+  label,dd{
+    line-height:20px;
+    height:20px;
+    vertical-align:middle;
+  }
+
+  dt{
+    margin-top:10px;
+  }
+
+  small {font-size:13px; color:$dark_green}
 }
