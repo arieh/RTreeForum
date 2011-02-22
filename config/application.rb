@@ -38,5 +38,8 @@ module FEDs
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    config.action_mailer.delivery_method   = :postmark
+    config.action_mailer.postmark_settings = { :api_key => "your-api-key" }
   end
 end
