@@ -12,4 +12,8 @@ javascripts:
     - public/javascripts/base/mootools-core-1.3.js
     - public/javascripts/base/mootools-more.js
     - public/javascripts/base/*.js      
+  invitations:
+    - public/javascripts/base/mootools-core-1.3.js
+    - public/javascripts/base/mootools-more.js
+    - public/javascripts/base/*.js       
  
