@@ -273,8 +273,9 @@ header.main .title {
   font-size: 4em;
   margin-bottom: 15px;
   padding: 5px;
+  color: #666;
 }
-/* line 166, source/application.scss */
+/* line 167, source/application.scss */
 header.main nav {
   border-bottom: 3px solid #3d7389;
   margin-bottom: 10px;
@@ -285,16 +286,16 @@ header.main nav {
   padding: 3px 8px;
   vertical-align: middle;
 }
-/* line 176, source/application.scss */
+/* line 177, source/application.scss */
 header.main nav a, header.main nav a:visited {
   color: #fff;
   font-weight: bold;
 }
-/* line 178, source/application.scss */
+/* line 179, source/application.scss */
 header.main nav ul {
   text-align: left;
 }
-/* line 180, source/application.scss */
+/* line 181, source/application.scss */
 header.main nav li {
   margin-right: 10px;
   text-transform: capitalize;
@@ -303,30 +304,31 @@ header.main nav li {
   border-left: 2px solid #fff;
   padding-left: 10px;
 }
-/* line 189, source/application.scss */
+/* line 190, source/application.scss */
 header.main nav li:first-child {
   border: 0;
 }
 
-/* line 196, source/application.scss */
+/* line 197, source/application.scss */
 h1 {
   font-size: 2em;
   font-weight: bold;
+  margin-bottom: 15px;
 }
 
-/* line 201, source/application.scss */
+/* line 203, source/application.scss */
 .reply {
   text-align: right;
   font-size: 13px;
   padding-right: 5px;
   min-height: 18px;
 }
-/* line 207, source/application.scss */
+/* line 209, source/application.scss */
 .reply .reply {
   cursor: pointer;
   text-decoration: underline;
 }
-/* line 209, source/application.scss */
+/* line 211, source/application.scss */
 .reply label {
   line-height: 20px;
   text-align: right;
@@ -335,7 +337,7 @@ h1 {
   position: absolute;
   font-size: 12px;
 }
-/* line 211, source/application.scss */
+/* line 213, source/application.scss */
 .reply form {
   display: none;
   text-align: center;
@@ -345,79 +347,104 @@ h1 {
   width: 300px;
   margin-left: 90px;
 }
-/* line 220, source/application.scss */
+/* line 222, source/application.scss */
 .reply form textarea, .reply form input {
   width: 95%;
   margin: 0 auto;
 }
-/* line 221, source/application.scss */
+/* line 223, source/application.scss */
 .reply form input[type=submit] {
   width: 295px;
 }
-/* line 222, source/application.scss */
+/* line 224, source/application.scss */
 .reply form textarea {
   height: 100px;
 }
 
-/* line 229, source/application.scss */
+/* line 231, source/application.scss */
 .body {
   padding: 10px;
   margin: 2px 5px;
   background: #d2e4ec;
 }
 
-/* line 235, source/application.scss */
+/* line 237, source/application.scss */
 .base {
   margin: 15px 0;
 }
-/* line 236, source/application.scss */
+/* line 238, source/application.scss */
 .base article {
   background: #6ba7bf;
 }
 
-/* line 243, source/application.scss */
+/* line 245, source/application.scss */
 h2 {
   font-size: 20px;
 }
 
-/* line 245, source/application.scss */
+/* line 247, source/application.scss */
 #new-post {
   visibility: hidden;
   position: absolute;
 }
-/* line 248, source/application.scss */
+/* line 250, source/application.scss */
 #new-post form {
   width: 300px;
   height: 300px;
   text-align: center;
   position: relative;
 }
-/* line 255, source/application.scss */
+/* line 257, source/application.scss */
 #new-post h2 {
   text-transform: capitalize;
   text-align: center;
 }
-/* line 260, source/application.scss */
+/* line 262, source/application.scss */
 #new-post label {
   text-align: left;
   height: 18px;
 }
-/* line 265, source/application.scss */
+/* line 267, source/application.scss */
 #new-post input, #new-post textarea, #new-post label {
   width: 250px;
   margin: 0 auto;
 }
-/* line 270, source/application.scss */
+/* line 272, source/application.scss */
 #new-post textarea {
   height: 200px;
 }
-/* line 274, source/application.scss */
+/* line 276, source/application.scss */
 #new-post input[type=submit] {
   width: 200px;
 }
 
-/* line 279, source/application.scss */
+/* line 281, source/application.scss */
 #paging ol {
   font-size: 13px;
   margin-top: 20px;
+}
+
+/* line 288, source/application.scss */
+#user_edit {
+  padding-left: 155px;
+}
+/* line 291, source/application.scss */
+#user_edit label {
+  width: 150px;
+  font-size: 13px;
+}
+/* line 296, source/application.scss */
+#user_edit label, #user_edit dd {
+  line-height: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+/* line 302, source/application.scss */
+#user_edit dt {
+  margin-top: 10px;
+}
+/* line 306, source/application.scss */
+#user_edit small {
+  font-size: 13px;
+  color: #375b2d;
 }

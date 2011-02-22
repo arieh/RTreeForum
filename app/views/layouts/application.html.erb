@@ -15,7 +15,7 @@
   </head>
   <body>
       <header class='main'>
-        <span class="title"><%=t('site_name')%> </span>
+      <%=link_to t('site_name'), root_path,{:class=>'title'}%>
         <nav>
         <ul>
         <%if (!current_user)%>
@@ -24,6 +24,7 @@
           <li><%=link_to t('post.index.new_post'),new_posts_url,{:id=>'new-post-button'}%></li>
           <li><%=link_to t('log_out'),destroy_user_session_path%></li> 
           <li><%=link_to t('invite'),new_user_invitation_path%></li>
+          <li><%=link_to t('edit_account'), edit_user_registration_path%></li>
         <%end%>
         </ul>
         </nav>
