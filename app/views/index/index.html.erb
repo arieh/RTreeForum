@@ -1,5 +1,3 @@
-<%if (current_user) then%>
-
 <h1><%=t "post.index.title"%></h1>
 <ol class='posts message-list'>
 <% @Posts.each do |p| %>
@@ -33,4 +31,3 @@
 <h2><%=t('post.index.new_post')%></h2>
 <%= render :partial => 'posts/new_post',:locals =>{:new_post => @new_post,:parent =>false}%>
 </aside>
-<%end%>
