@@ -14,6 +14,7 @@ gem 'devise_invitable'
 gem 'jammit'
 gem 'pg'
 gem 'yui-compressor' 
+gem 'postmark'
 gem 'postmark-rails'
 
 #

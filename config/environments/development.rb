@@ -25,7 +25,7 @@ FEDs::Application.configure do
 
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  ActionMailer::Base.smtp_settings = {
+=begin  ActionMailer::Base.smtp_settings = {
      :address => "mail.arieh.co.il",
      :domain => "mail.arieh.co.il",
      :user_name => "feds@arieh.co.il",
@@ -34,5 +34,6 @@ FEDs::Application.configure do
   
   @log = Logger.new(STDOUT)
   @log.level = Logger::INFO
+=end
 end
 
