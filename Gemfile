@@ -14,7 +14,7 @@ gem 'devise_invitable'
 gem 'jammit'
 gem 'pg'
 gem 'yui-compressor' 
-gem 'postmark-rails', '0.4.0'
+gem 'postmark-rails'
 
 #
 # Use unicorn as the web server
