@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
     <%= stylesheet_link_tag "application" %>
     <%= csrf_meta_tag %>
+    <title><%=t('site_name')%></title>
     <%= yield(:head) %>
     <link href='http://fonts.googleapis.com/css?family=IM+Fell+Great+Primer' rel='stylesheet' type='text/css'>
     <%=stylesheet_link_tag 'FloatBox' %>
@@ -17,11 +17,15 @@
       <header class='main'>
         <span class="title"><%=t('site_name')%> </span>
         <nav>
+        <ul>
         <%if (!current_user)%>
-          <%=link_to t('log_in'),new_user_session_path%> 
+          <li><%=link_to t('log_in'),new_user_session_path%></li>
         <%else%>
-          <%=link_to t('log_out'),destroy_user_session_path%> 
+          <li><%=link_to t('post.index.new_post'),new_posts_url,{:id=>'new-post-button'}%></li>
+          <li><%=link_to t('log_out'),destroy_user_session_path%></li> 
+          <li><%=link_to t('invite'),new_user_invitation_path%></li>
         <%end%>
+        </ul>
         </nav>
       </header>
       <% flash.each do |name, msg| %>

@@ -3,6 +3,7 @@
 
 en:
   log_in: "Log in"
+  invite: "Invite new user"
   log_out: "Log out"
   site_name: "FEDs"
   index:
