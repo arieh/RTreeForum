@@ -47,11 +47,5 @@ FEDs::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  ActionMailer::Base.smtp_settings = {
-     :address => "mail.arieh.co.il",
-     :domain => "mail.arieh.co.il",
-     :user_name => "feds@arieh.co.il",
-     :password => "rjntqvzz",
-  }
- 
+
 end
