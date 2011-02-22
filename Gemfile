@@ -13,8 +13,9 @@ gem 'compass'
 gem 'devise_invitable'
 gem 'jammit'
 gem 'pg'
-gem 'closure-compiler '
-#gem 'yui-compressor' 
+#gem 'closure-compiler '
+gem 'yui-compressor' 
+gem 'postmark-rails', '0.4.0'
 
 #
 # Use unicorn as the web server
