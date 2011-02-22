@@ -40,6 +40,7 @@ module FEDs
     config.filter_parameters += [:password]
 
     config.action_mailer.delivery_method   = :postmark
-    config.action_mailer.postmark_settings = { :api_key => "your-api-key" }
+    config.action_mailer.postmark_settings = { :api_key => "f81e2dd5-3b70-4472-ba4c-cf261efec233"}
+    #config.action_mailer.from = "arieh@arieh.co.il" 
   end
 end
