@@ -12,6 +12,14 @@ class PostsController < ApplicationController
     end
   end
 =end
+  def search
+    @param = params[:search][:search]
+    @Posts = Post.search(:title_or_body_contains=>@param)
+
+    puts(@Posts)
+  end
+
+
   def new
     @Post = current_user.posts.new(params[:post])
     if (@parent)

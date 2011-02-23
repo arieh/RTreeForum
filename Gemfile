@@ -17,6 +17,7 @@ gem 'yui-compressor'
 gem 'postmark'
 gem 'postmark-rails'
 #gem 'ckeditor', '>=3.4.2'
+gem "meta_search"
             
 #
 # Use unicorn as the web server

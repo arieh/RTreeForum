@@ -17,6 +17,8 @@ FEDs::Application.routes.draw do
 
   match '/posts/new/:parent_id' => 'posts#new', :defaults => {:parent_id => false}, :as => :new_post_with_parent
 
+  match '/posts/search' => 'posts#search', :as => :search_posts
+
   match '/invites/validate/:email/:key' => 'invites#validate'
   # The priority is based upon order of creation:
   #

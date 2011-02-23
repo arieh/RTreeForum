@@ -1,10 +1,10 @@
-//Basic toggle functionality {{{
-;(function(){
+//Basic functionality {{{
+;(function($){
 var styles = {
   display : ['none','block']
   , visibility : ['hidden','visible']
 }
-
+                
 Element.implement({
   'toggle' : function(style){
     if (!style || !styles.contains[style]) style='display';
@@ -12,10 +12,31 @@ Element.implement({
     var state = this.retrieve('toggle:state') || this.getStyle(style);
     state = (state == styles[style][0]) ? styles[style][1] : styles[style][0];
     this.setStyle(style,state).store('toggle:state',state);
-  }  
-});  
+  }
+});
 
+var has = (function(){
+    var input = document.createElement('input');
+    input.setAttribute('type','text');
+    return ('placeholder' in input);        
 })();
+
+if (!has){
+    $$('input[placeholder]').each(function(input){
+        var pl = input.get('placeholder')
+        input.set('value',pl);
+        input.addEvents({
+             focus : function(e){
+                if (input.value == pl) input.value =''; 
+             }
+             , blur : function(e){
+                if (input.value=='') input.value = pl;
+             }
+        });
+    });     
+}
+ 
+}).apply(this,[document.id]);
 //}}}
 
 //Filters {{{

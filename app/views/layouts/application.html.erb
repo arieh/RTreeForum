@@ -27,6 +27,10 @@
           <li><%=link_to t('edit_account'), edit_user_registration_path%></li>
         <%end%>
         </ul>
+        <%= form_for :search,:url=>{:controller=>:posts,:action=>:search},:html=>{:id=>'search_form'} do |f| %>
+          <%=f.search_field :search,{:placeholder=>t('search')}%>
+          <%=f.submit t('search') %>
+        <%end%>
         </nav>
       </header>
       <% flash.each do |name, msg| %>
