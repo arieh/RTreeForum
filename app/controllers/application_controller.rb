@@ -8,16 +8,15 @@ class ApplicationController < ActionController::Base
     ActionMailer::Base.default_url_options[:host] = request.host_with_port
   end
 
-  def check_user
+  def check_user                                           
+    #allowed = {'devise/sessions'=>'new','devise/invitations'=>'edit'}
+    allowed = ['/users/invitaions','/users/sign_in']
     if (!current_user) 
-      
-      path = Rails.application.routes.recognize_path request.env['PATH_INFO']
-      if (path[:controller]=='devise/sessions' && path[:action]=='new') 
+      if (allowed.index(request.env['PATH_INFO']) != nil )
         return
       end
 
       redirect_to new_user_session_path, :notice => t('not_logged_in')
-      
     end
   end
 end
