@@ -1,3 +1,7 @@
+<% content_for :title do %>
+  <%=' :: ' + t('post.index.title')%>
+<%end%>
+
 <h1><%=t "post.index.title"%></h1>
 <ol class='posts message-list'>
 <% @Posts.each do |p| %>
