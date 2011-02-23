@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   before_filter :mailer_set_url_options
+  before_filter :new_post
  
   def mailer_set_url_options
     ActionMailer::Base.default_url_options[:host] = request.host_with_port
@@ -18,5 +19,9 @@ class ApplicationController < ActionController::Base
 
       redirect_to new_user_session_path, :notice => t('not_logged_in')
     end
+  end
+
+  def new_post
+    @new_post = Post.new
   end
 end

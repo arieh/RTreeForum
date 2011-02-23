@@ -142,6 +142,9 @@ nav{
     top:2px;
   }
 }
+.post.current article{
+  background:#71D981;
+}
 .close{
    >article{
      > .body {display:none}  
@@ -319,7 +322,7 @@ span.cke_skin_kama {
 }
 
 #search_form{
-  width:200px;
+  width:220px;
   float:right;
   color:#000; 
   font-size:13px;

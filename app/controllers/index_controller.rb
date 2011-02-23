@@ -11,7 +11,6 @@ class IndexController < ApplicationController
 
       @Posts = Post.order('updated_at DESC').limit(@per_page).offset(@start*@per_page).where(:base=>0)
 
-      @new_post = Post.new
    
   end 
 end

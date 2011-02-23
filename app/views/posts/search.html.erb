@@ -1,12 +1,12 @@
 <% content_for :title do %>
-  <%=t('search.title')%>
+  <%=' > '+t('search_page.title')+ ' ' + @param%>
 <%end%>
 
-<h2><%=t('search.results_for') + @param%></h2>
-<ol class='results'>
+<h1><%=t('search_page.title')+ ' "' + @param + '"'%></h1>
+<ol class='results posts'>
 <% @Posts.each do |post| %>
-  <li class='result post'>
-    <%=render :partial => 'index/post', :locals =>{:post=>post,:base=>true}%>
+  <li class='result base'>
+    <%=render :partial => 'index/post', :locals =>{:post=>post,:base=>true , :search=>true}%>
   </li>
 <%end%>
 </ol>

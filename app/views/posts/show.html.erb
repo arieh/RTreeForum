@@ -1,0 +1,7 @@
+<% content_for :title do %>
+  <%=@Post.title%>
+<%end%>
+<h1><%=@Post.title %></h1>
+<ol class="results post">
+  <%=render :partial=>'list', :locals => {:posts=>@Posts, :current=>@current} %>
+</ol>

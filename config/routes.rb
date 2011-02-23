@@ -9,7 +9,7 @@ FEDs::Application.routes.draw do
 
   devise_for :users
 
-  root :to => "index#index"
+  root :to => "posts#index"
 
   resource :posts, :invites
 
@@ -20,6 +20,8 @@ FEDs::Application.routes.draw do
   match '/posts/search' => 'posts#search', :as => :search_posts
 
   match '/invites/validate/:email/:key' => 'invites#validate'
+
+  match '/posts/:id' => 'posts#show', :as => :open_post
   # The priority is based upon order of creation:
   #
   # first created -> highest priority.
