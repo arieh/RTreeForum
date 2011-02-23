@@ -150,7 +150,7 @@ nav{
   }
 }
 
-.post.current > article{
+.post.current > article, .base.current > article{
   background:#71D981;
   >header>.permalink{color:#8A88C4}
 }

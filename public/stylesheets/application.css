@@ -248,11 +248,11 @@ nav li.current {
 }
 
 /* line 153, source/application.scss */
-.post.current > article {
+.post.current > article, .base.current > article {
   background: #71D981;
 }
 /* line 155, source/application.scss */
-.post.current > article > header > .permalink {
+.post.current > article > header > .permalink, .base.current > article > header > .permalink {
   color: #8A88C4;
 }
 

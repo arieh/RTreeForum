@@ -2,6 +2,6 @@
   <%=@Post.title%>
 <%end%>
 <h1><%=@Post.title %></h1>
-<ol class="results post">
+<ol class="results posts"  data-filters="PostList">
   <%=render :partial=>'list', :locals => {:posts=>@Posts, :current=>@current} %>
 </ol>

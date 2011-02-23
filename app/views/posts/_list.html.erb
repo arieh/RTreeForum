@@ -1,5 +1,5 @@
 <% posts.each do |p| %>
-  <li class='base  <%=(defined?(current) && current==p.id) ? 'current' : ''%>' id='post<%=p.id%>' data-filters='Base'>
+  <li class='base  <%=(defined?(current) && current==p.id) ? 'current' : ''%>' id='post<%=p.id%>' data-filters='Base<%=(defined?(current) && current==p.id) ? ',Current' : ''%>'>
     <%= render :partial => 'posts/post' , :locals => {:post=>p,:base=>true}%>
     <ol class='message-list'>
     <% p.posts.each do |c| %>
