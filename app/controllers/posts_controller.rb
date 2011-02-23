@@ -1,3 +1,5 @@
+include ActionView::Helpers::SanitizeHelper
+
 class PostsController < ApplicationController
   before_filter :get_parent, :only =>[:new,:create]
 =begin
@@ -24,6 +26,7 @@ class PostsController < ApplicationController
   
   def create  
     @Post = current_user.posts.new(params[:post])
+    @Post.body =sanitize @Post.body, :tags=> %w(p strong li ul ol strike a object embbed param iframe)
     if (@parent)
       if (@parent.base == 0) 
         @Post.base = @parent.id

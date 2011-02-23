@@ -90,7 +90,7 @@ nav{
 .post,.base{
   margin:5px 0;
   margin-left:25px;
-  width:400px;
+  width:480px;
   position:relative;
 
   .handle{text-decoration:underline; cursor:pointer}
@@ -208,16 +208,16 @@ h1{
 
   .reply{cursor:pointer; text-decoration:underline}
 
-  label{line-height:20px;text-align:right; width:90px; left:-90px;position:absolute; font-size:12px;}
+  label{line-height:20px;text-align:right; width:90px; left:-5px;position:absolute; font-size:12px;}
 
   form {
     display:none;
     text-align:center;
-    height:155px;
+    height:265px;
     position:relative;
     margin:5px;
-    width:300px;
-    margin-left:90px;
+    width:380px;
+    padding-left:90px;
 
     textarea,input{width:95%; margin:0 auto;}
     input[type=submit]{width:295px}
@@ -248,10 +248,11 @@ h2 {font-size:20px;}
   visibility:hidden;
   position:absolute;
   form{
-    width:300px;
+    width:380px;
     height:300px;
     text-align:center;
     position:relative;
+    padding-left:0
   }
 
   h2{
@@ -262,6 +263,8 @@ h2 {font-size:20px;}
   label {
     text-align:left;
     height:18px;
+    position:relative;
+    left:0;
   }
 
   input,textarea, label{
@@ -304,4 +307,8 @@ h2 {font-size:20px;}
   }
 
   small {font-size:13px; color:$dark_green}
+}
+
+span.cke_skin_kama {
+    @include border-radius(0)
 }

@@ -16,5 +16,7 @@ Element.implement({
 
 })();
 
+CKEDITOR.config.contentsCss = '/stylesheets/editor.css';
+CKEDITOR.config.contentsLangDirection='ltr';
 
 

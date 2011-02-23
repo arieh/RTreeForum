@@ -16,7 +16,8 @@ gem 'pg'
 gem 'yui-compressor' 
 gem 'postmark'
 gem 'postmark-rails'
-
+gem 'ckeditor', '>=3.4.2'
+            
 #
 # Use unicorn as the web server
 # gem 'unicorn'

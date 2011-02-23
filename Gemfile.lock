@@ -31,6 +31,8 @@ GEM
     arel (2.0.8)
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
+    ckeditor (3.5.0)
+      mime-types (>= 1.16)
     closure-compiler (1.0.0)
     compass (0.10.6)
       haml (>= 3.0.4)
@@ -102,6 +104,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ckeditor (>= 3.4.2)
   compass
   devise
   devise_invitable
