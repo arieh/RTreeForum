@@ -232,6 +232,10 @@ h1{
   padding:10px;
   margin:2px 5px;
   background:$lighter_blue;
+
+  ol,ul{padding:15px;}
+  ul{list-style:disc;}
+  ol{list-style:decimal;} 
 }
 
 .base{

@@ -367,27 +367,39 @@ h1 {
   margin: 2px 5px;
   background: #d2e4ec;
 }
-
+/* line 236, source/application.scss */
+.body ol, .body ul {
+  padding: 15px;
+}
 /* line 237, source/application.scss */
+.body ul {
+  list-style: disc;
+}
+/* line 238, source/application.scss */
+.body ol {
+  list-style: decimal;
+}
+
+/* line 241, source/application.scss */
 .base {
   margin: 15px 0;
 }
-/* line 238, source/application.scss */
+/* line 242, source/application.scss */
 .base article {
   background: #6ba7bf;
 }
 
-/* line 245, source/application.scss */
+/* line 249, source/application.scss */
 h2 {
   font-size: 20px;
 }
 
-/* line 247, source/application.scss */
+/* line 251, source/application.scss */
 #new-post {
   visibility: hidden;
   position: absolute;
 }
-/* line 250, source/application.scss */
+/* line 254, source/application.scss */
 #new-post form {
   width: 380px;
   height: 300px;
@@ -395,64 +407,64 @@ h2 {
   position: relative;
   padding-left: 0;
 }
-/* line 258, source/application.scss */
+/* line 262, source/application.scss */
 #new-post h2 {
   text-transform: capitalize;
   text-align: center;
 }
-/* line 263, source/application.scss */
+/* line 267, source/application.scss */
 #new-post label {
   text-align: left;
   height: 18px;
   position: relative;
   left: 0;
 }
-/* line 270, source/application.scss */
+/* line 274, source/application.scss */
 #new-post input, #new-post textarea, #new-post label {
   width: 250px;
   margin: 0 auto;
 }
-/* line 275, source/application.scss */
+/* line 279, source/application.scss */
 #new-post textarea {
   height: 200px;
 }
-/* line 279, source/application.scss */
+/* line 283, source/application.scss */
 #new-post input[type=submit] {
   width: 200px;
 }
 
-/* line 284, source/application.scss */
+/* line 288, source/application.scss */
 #paging ol {
   font-size: 13px;
   margin-top: 20px;
 }
 
-/* line 291, source/application.scss */
+/* line 295, source/application.scss */
 #user_edit {
   padding-left: 155px;
 }
-/* line 294, source/application.scss */
+/* line 298, source/application.scss */
 #user_edit label {
   width: 150px;
   font-size: 13px;
 }
-/* line 299, source/application.scss */
+/* line 303, source/application.scss */
 #user_edit label, #user_edit dd {
   line-height: 20px;
   height: 20px;
   vertical-align: middle;
 }
-/* line 305, source/application.scss */
+/* line 309, source/application.scss */
 #user_edit dt {
   margin-top: 10px;
 }
-/* line 309, source/application.scss */
+/* line 313, source/application.scss */
 #user_edit small {
   font-size: 13px;
   color: #375b2d;
 }
 
-/* line 312, source/application.scss */
+/* line 316, source/application.scss */
 span.cke_skin_kama {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
