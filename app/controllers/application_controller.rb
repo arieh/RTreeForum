@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   def check_user                                           
     #allowed = {'devise/sessions'=>'new','devise/invitations'=>'edit'}
-    allowed = ['/users/invitaions','/users/sign_in']
+    allowed = ['/users/invitation','/users/sign_in','/users/invitation/accept']
     if (!current_user) 
       if (allowed.index(request.env['PATH_INFO']) != nil )
         return
