@@ -2,16 +2,42 @@ include ActionView::Helpers::SanitizeHelper
 
 class PostsController < ApplicationController
   before_filter :get_parent, :only =>[:new,:create]
-=begin
-  def show
-    @Post = Post.find(params[:id])
   
-    respond_to do |format|
-    format.html # show.html.erb
-    format.xml  { render :xml => @Post }
+  def index
+      @per_page = 8
+      @start = Integer(params[:start])
+      @count = Post.where(:base=>0).count
+      @pages = @count/@per_page
+
+      if (@pages*@per_page < @count) 
+         @pages+=1
+      end
+
+      @Posts = Post.order('updated_at DESC').limit(@per_page).offset(@start*@per_page).where(:base=>0)
+
+   
+  end 
+  def show
+
+    @Post = Post.find(params[:id])
+    if (@Post.base == 0) 
+      @Posts = [@Post]
+    else
+      @Posts = [@Post.base_post]
     end
+    puts(@Posts)
+    @current = @Post.id
+
   end
-=end
+  
+  def search
+    @param = params[:search][:search]
+    @Posts = Post.search(:title_or_body_contains=>@param)
+
+    puts(@Posts)
+  end
+
+
   def new
     @Post = current_user.posts.new(params[:post])
     if (@parent)

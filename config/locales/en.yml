@@ -7,9 +7,12 @@ en:
   log_out: "Log out"
   edit_account: 'Edit account'
   site_name: "FEDs"
+  search: 'search'
   not_logged_in: "You must be signed in to view this site's content"
   errors:
     invalid_parent: "Invalid parent id"
+  search_page:
+    title: 'Search results for'
   post:
     index:
       title: "Posts"
@@ -18,6 +21,7 @@ en:
       reply: "reply"
       create_success: "Post was created successfully"
       in_response: "In response to"
+      permalink: 'permalink'
     new:
       title: "New Post"
       fields:
