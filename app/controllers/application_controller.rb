@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   def check_user                                           
     allowed = {'devise/sessions'=>'new','devise/invitations'=>'edit'}
     if (!current_user) 
-      if (request.env['PATH_INFO']=='users/invitation') 
+      if (request.env['PATH_INFO']== "/users/invitation" )
         return
       end
       
