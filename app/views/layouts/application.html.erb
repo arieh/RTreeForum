@@ -21,7 +21,7 @@
         <%if (!current_user)%>
           <li><%=link_to t('log_in'),new_user_session_path%></li>
         <%else%>
-          <li><%=link_to t('post.index.new_post'),new_posts_url,{:id=>'new-post-button'}%></li>
+          <li><%=link_to t('post.index.new_post'),new_posts_url,{'data-filters'=>'NewPost'}%></li>
           <li><%=link_to t('log_out'),destroy_user_session_path%></li> 
           <li><%=link_to t('invite'),new_user_invitation_path%></li>
           <li><%=link_to t('edit_account'), edit_user_registration_path%></li>
@@ -34,7 +34,7 @@
       <% end %>
       <%= yield %>
      <% javascripts= {
-        'base'  => %w(mootools-core-1.3 mootools-more FloatBox delegation rails application) ,
+        'base'  => %w(mootools-core-1.3 mootools-more FloatBox delegation Behavior rails) ,
         'index' => %w(Post Tree index)
       }%>
       <%= javascript_include_tag 'ckeditor/ckeditor' %>
@@ -47,5 +47,6 @@
             <%= javascript_include_tag controller_name + '/' + js %>
           <%end%>
       <%end%>
+      <%= javascript_include_tag 'base/application' %>
   </body>
 </html>
