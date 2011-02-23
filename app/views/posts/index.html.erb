@@ -4,21 +4,7 @@
 
 <h1><%=t "post.index.title"%></h1>
 <ol class='posts message-list' data-filters="PostList">
-<% @Posts.each do |p| %>
-  <li class='base' id='post<%=p.id%>' data-filters='Base'>
-    <%= render :partial => 'post' , :locals => {:post=>p,:base=>true}%>
-    <ol class='message-list'>
-    <% p.posts.each do |c| %>
-      <li class='post child close' data-parent="<%=c.parent_id%>" id='post<%=c.id%>' data-filters='Post'>
-        <%= render :partial => 'post' , :locals => {:post=>c, :base=>false} %>
-        <aside class="comments">
-          <ol class="message-list"></ol>
-        </aside>  
-      </li>
-    <%end%>
-    </ol>
-  </li>
-<% end %>
+  <%= render :partial => 'posts/list', :locals =>{:posts=>@Posts}%>
 </ol>
 <%if (@count>@per_page)%>
 <nav id='paging'>

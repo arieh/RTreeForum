@@ -142,6 +142,9 @@ nav{
     top:2px;
   }
 }
+.post.current article{
+  background:#71D981;
+}
 .close{
    >article{
      > .body {display:none}  
@@ -169,14 +172,19 @@ header.main{
     margin-bottom:10px;
     background:$light_blue;
     color:#fff;
-    height:20px;
-    line-height:20px;
-    padding:3px 8px;
+    height:24px;
+    line-height:24px;
+    padding:3px 0px;
     vertical-align:middle;
 
     a, a:visited{color:#fff; font-weight:bold;}
 
-    ul{text-align:left;}
+    ul{
+      text-align:left; 
+      width:550px;
+
+      @include inline-block;
+    }
     
     li {
       margin-right:10px;
@@ -311,4 +319,22 @@ h2 {font-size:20px;}
 
 span.cke_skin_kama {
     @include border-radius(0)
+}
+
+#search_form{
+  width:220px;
+  float:right;
+  color:#000; 
+  font-size:13px;
+  padding-right:5px;
+  
+  @include inline-block;
+
+  input[type=submit]{
+    @include inline-block;
+  }
+
+  input[type=search],input[type=text]{
+    width:100px;
+  }
 }

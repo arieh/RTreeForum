@@ -9,12 +9,14 @@ filters.Base = function(el){
   el.store('post',base);
 };//}}}
 
+
 // Post {{{
 filters.Post = function(el){
   var post = posts[el.get('id').substr(4)] = new Post(el);
   el.store('post',post);
   posts[el.getData('parent')].addChild(post);
 };//}}}
+
 
 //PostList {{{
 filters.PostList = function(el){
@@ -35,4 +37,9 @@ filters.PostList = function(el){
   });
 }//}}}
 
+//Current {{{
+filters.Current = function(el){
+  var pos = el.getPosition();
+  window.scrollTo(pos.x,pos.y);
+}
 //}}}
