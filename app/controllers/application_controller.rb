@@ -9,22 +9,14 @@ class ApplicationController < ActionController::Base
   end
 
   def check_user                                           
-    allowed = {'devise/sessions'=>'new','devise/invitations'=>'edit'}
+    #allowed = {'devise/sessions'=>'new','devise/invitations'=>'edit'}
+    allowed = ['/users/invitaions','/users/sign_in']
     if (!current_user) 
-      if (request.env['PATH_INFO']== "/users/invitation" )
+      if (allowed.index(request.env['PATH_INFO']) != nil )
         return
       end
-      
-      path = Rails.application.routes.recognize_path request.env['PATH_INFO']
-
-      if (allowed.has_key?(path[:controller]) && allowed[path[:controller]]==path[:action])
-        return
-
-      end
-
 
       redirect_to new_user_session_path, :notice => t('not_logged_in')
-      
     end
   end
 end

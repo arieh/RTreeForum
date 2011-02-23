@@ -31,7 +31,6 @@ GEM
     arel (2.0.8)
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
-    closure-compiler (1.0.0)
     compass (0.10.6)
       haml (>= 3.0.4)
     devise (1.1.5)
@@ -44,9 +43,6 @@ GEM
       abstract (>= 1.0.0)
     haml (3.0.25)
     i18n (0.5.0)
-    jammit (0.6.0)
-      closure-compiler (>= 0.1.0)
-      yui-compressor (>= 0.9.1)
     mail (2.2.15)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -105,7 +101,6 @@ DEPENDENCIES
   compass
   devise
   devise_invitable
-  jammit
   nifty-generators
   pg
   postmark
