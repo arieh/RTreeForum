@@ -12,7 +12,6 @@ class ApplicationController < ActionController::Base
     allowed = {'devise/sessions'=>'new','devise/invitations'=>'edit'}
     if (!current_user) 
       path = Rails.application.routes.recognize_path request.env['PATH_INFO']
-#      if ( (path[:controller]=='devise/sessions' && path[:action]=='new') or (path[:controller]=='devise/invitations' && path[:action]=='edit')) 
       if (allowed.has_key?(path[:controller]) && allowed[path[:controller]]==path[:action])
         return
       end
