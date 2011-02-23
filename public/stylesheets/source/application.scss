@@ -95,6 +95,13 @@ nav{
 
   .handle{text-decoration:underline; cursor:pointer}
 
+  .permalink, .permalink:visited{
+    color:#71D9AE;
+    font-size:13px;
+    float:right;
+    padding-right:5px;
+  }
+
   header{
     line-height:20px;
     vertical-align:baseline;
@@ -142,8 +149,9 @@ nav{
     top:2px;
   }
 }
-.post.current article{
+.post.current > article{
   background:#71D981;
+  >header>.permalink{color:#8A88C4}
 }
 .close{
    >article{

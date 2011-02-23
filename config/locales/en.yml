@@ -21,6 +21,7 @@ en:
       reply: "reply"
       create_success: "Post was created successfully"
       in_response: "In response to"
+      permalink: 'permalink'
     new:
       title: "New Post"
       fields:

@@ -14,6 +14,7 @@
 
     <cite><%=t('post.index.by') +' '+ post.user.username %></cite>
     <time class='posted_at' datetime="<%=post.updated_at.to_s%>"><%=post.updated_at.strftime("%e/%m/%y - %H:%M")%></time>
+    <%= link_to t('post.index.permalink'),open_post_path(post),{:class=>'permalink'} %>
     <% if (!base) then %>
       <div class='response'><%=t("post.index.in_response")+' '+post.parent.user.username%></div> 
     <%end%>

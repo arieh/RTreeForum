@@ -173,6 +173,13 @@ nav li.current {
   cursor: pointer;
 }
 /* line 98, source/application.scss */
+.post .permalink, .post .permalink:visited, .base .permalink, .base .permalink:visited {
+  color: #71D9AE;
+  font-size: 13px;
+  float: right;
+  padding-right: 5px;
+}
+/* line 105, source/application.scss */
 .post header, .base header {
   line-height: 20px;
   vertical-align: baseline;
@@ -180,107 +187,111 @@ nav li.current {
   padding-left: 5px;
   min-height: 40px;
 }
-/* line 106, source/application.scss */
+/* line 113, source/application.scss */
 .post h3, .post cite, .base h3, .base cite {
   display: inline-block;
   vertical-align: top;
   _display: inline;
   zoom: 1;
 }
-/* line 109, source/application.scss */
+/* line 116, source/application.scss */
 .post cite, .base cite {
   margin: 0 10px;
   font-style: italic;
   font-size: 13px;
 }
-/* line 110, source/application.scss */
+/* line 117, source/application.scss */
 .post .response, .base .response {
   font-size: 13px;
   height: 20px;
 }
-/* line 111, source/application.scss */
+/* line 118, source/application.scss */
 .post .avatar, .base .avatar {
   display: block;
   position: absolute;
 }
-/* line 116, source/application.scss */
+/* line 123, source/application.scss */
 .post .posted_at, .base .posted_at {
   font-size: 13px;
   float: right;
   padding-right: 5px;
 }
 
-/* line 124, source/application.scss */
+/* line 131, source/application.scss */
 .base {
   padding-left: 80px;
   padding-top: 5px;
 }
-/* line 127, source/application.scss */
+/* line 134, source/application.scss */
 .base > article > header {
   line-height: 30px;
 }
-/* line 129, source/application.scss */
+/* line 136, source/application.scss */
 .base > article > header h3 {
   font-size: 20px;
 }
-/* line 131, source/application.scss */
+/* line 138, source/application.scss */
 .base .avatar {
   left: 5px;
   top: 5px;
 }
 
-/* line 137, source/application.scss */
+/* line 144, source/application.scss */
 .post {
   padding-left: 44px;
   padding-top: 2px;
 }
-/* line 140, source/application.scss */
+/* line 147, source/application.scss */
 .post .avatar {
   left: 2px;
   top: 2px;
 }
 
-/* line 145, source/application.scss */
-.post.current article {
+/* line 152, source/application.scss */
+.post.current > article {
   background: #71D981;
 }
+/* line 154, source/application.scss */
+.post.current > article > header > .permalink {
+  color: #8A88C4;
+}
 
-/* line 150, source/application.scss */
+/* line 158, source/application.scss */
 .close > article > .body {
   display: none;
 }
-/* line 151, source/application.scss */
+/* line 159, source/application.scss */
 .close > article > .reply {
   display: none;
 }
 
-/* line 156, source/application.scss */
+/* line 164, source/application.scss */
 .open > aritcle > .body {
   display: block;
 }
-/* line 157, source/application.scss */
+/* line 165, source/application.scss */
 .open > aritcle > .reply {
   display: block;
 }
 
-/* line 160, source/application.scss */
+/* line 168, source/application.scss */
 a, a:visited {
   text-decoration: none;
   color: blue;
 }
 
-/* line 161, source/application.scss */
+/* line 169, source/application.scss */
 header.main {
   background: #d2e4ec;
 }
-/* line 163, source/application.scss */
+/* line 171, source/application.scss */
 header.main .title {
   font-size: 4em;
   margin-bottom: 15px;
   padding: 5px;
   color: #666;
 }
-/* line 170, source/application.scss */
+/* line 178, source/application.scss */
 header.main nav {
   border-bottom: 3px solid #3d7389;
   margin-bottom: 10px;
@@ -291,12 +302,12 @@ header.main nav {
   padding: 3px 0px;
   vertical-align: middle;
 }
-/* line 180, source/application.scss */
+/* line 188, source/application.scss */
 header.main nav a, header.main nav a:visited {
   color: #fff;
   font-weight: bold;
 }
-/* line 182, source/application.scss */
+/* line 190, source/application.scss */
 header.main nav ul {
   text-align: left;
   width: 550px;
@@ -305,7 +316,7 @@ header.main nav ul {
   _display: inline;
   zoom: 1;
 }
-/* line 189, source/application.scss */
+/* line 197, source/application.scss */
 header.main nav li {
   margin-right: 10px;
   text-transform: capitalize;
@@ -314,31 +325,31 @@ header.main nav li {
   border-left: 2px solid #fff;
   padding-left: 10px;
 }
-/* line 198, source/application.scss */
+/* line 206, source/application.scss */
 header.main nav li:first-child {
   border: 0;
 }
 
-/* line 205, source/application.scss */
+/* line 213, source/application.scss */
 h1 {
   font-size: 2em;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
-/* line 211, source/application.scss */
+/* line 219, source/application.scss */
 .reply {
   text-align: right;
   font-size: 13px;
   padding-right: 5px;
   min-height: 18px;
 }
-/* line 217, source/application.scss */
+/* line 225, source/application.scss */
 .reply .reply {
   cursor: pointer;
   text-decoration: underline;
 }
-/* line 219, source/application.scss */
+/* line 227, source/application.scss */
 .reply label {
   line-height: 20px;
   text-align: right;
@@ -347,7 +358,7 @@ h1 {
   position: absolute;
   font-size: 12px;
 }
-/* line 221, source/application.scss */
+/* line 229, source/application.scss */
 .reply form {
   display: none;
   text-align: center;
@@ -357,47 +368,47 @@ h1 {
   width: 380px;
   padding-left: 90px;
 }
-/* line 230, source/application.scss */
+/* line 238, source/application.scss */
 .reply form textarea, .reply form input {
   width: 95%;
   margin: 0 auto;
 }
-/* line 231, source/application.scss */
+/* line 239, source/application.scss */
 .reply form input[type=submit] {
   width: 295px;
 }
-/* line 232, source/application.scss */
+/* line 240, source/application.scss */
 .reply form textarea {
   height: 100px;
 }
 
-/* line 239, source/application.scss */
+/* line 247, source/application.scss */
 .body {
   padding: 10px;
   margin: 2px 5px;
   background: #d2e4ec;
 }
 
-/* line 245, source/application.scss */
+/* line 253, source/application.scss */
 .base {
   margin: 15px 0;
 }
-/* line 246, source/application.scss */
+/* line 254, source/application.scss */
 .base article {
   background: #6ba7bf;
 }
 
-/* line 253, source/application.scss */
+/* line 261, source/application.scss */
 h2 {
   font-size: 20px;
 }
 
-/* line 255, source/application.scss */
+/* line 263, source/application.scss */
 #new-post {
   visibility: hidden;
   position: absolute;
 }
-/* line 258, source/application.scss */
+/* line 266, source/application.scss */
 #new-post form {
   width: 380px;
   height: 300px;
@@ -405,64 +416,64 @@ h2 {
   position: relative;
   padding-left: 0;
 }
-/* line 266, source/application.scss */
+/* line 274, source/application.scss */
 #new-post h2 {
   text-transform: capitalize;
   text-align: center;
 }
-/* line 271, source/application.scss */
+/* line 279, source/application.scss */
 #new-post label {
   text-align: left;
   height: 18px;
   position: relative;
   left: 0;
 }
-/* line 278, source/application.scss */
+/* line 286, source/application.scss */
 #new-post input, #new-post textarea, #new-post label {
   width: 250px;
   margin: 0 auto;
 }
-/* line 283, source/application.scss */
+/* line 291, source/application.scss */
 #new-post textarea {
   height: 200px;
 }
-/* line 287, source/application.scss */
+/* line 295, source/application.scss */
 #new-post input[type=submit] {
   width: 200px;
 }
 
-/* line 292, source/application.scss */
+/* line 300, source/application.scss */
 #paging ol {
   font-size: 13px;
   margin-top: 20px;
 }
 
-/* line 299, source/application.scss */
+/* line 307, source/application.scss */
 #user_edit {
   padding-left: 155px;
 }
-/* line 302, source/application.scss */
+/* line 310, source/application.scss */
 #user_edit label {
   width: 150px;
   font-size: 13px;
 }
-/* line 307, source/application.scss */
+/* line 315, source/application.scss */
 #user_edit label, #user_edit dd {
   line-height: 20px;
   height: 20px;
   vertical-align: middle;
 }
-/* line 313, source/application.scss */
+/* line 321, source/application.scss */
 #user_edit dt {
   margin-top: 10px;
 }
-/* line 317, source/application.scss */
+/* line 325, source/application.scss */
 #user_edit small {
   font-size: 13px;
   color: #375b2d;
 }
 
-/* line 320, source/application.scss */
+/* line 328, source/application.scss */
 span.cke_skin_kama {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -472,7 +483,7 @@ span.cke_skin_kama {
   border-radius: 0;
 }
 
-/* line 324, source/application.scss */
+/* line 332, source/application.scss */
 #search_form {
   width: 220px;
   float: right;
@@ -484,14 +495,14 @@ span.cke_skin_kama {
   _display: inline;
   zoom: 1;
 }
-/* line 333, source/application.scss */
+/* line 341, source/application.scss */
 #search_form input[type=submit] {
   display: inline-block;
   vertical-align: top;
   _display: inline;
   zoom: 1;
 }
-/* line 337, source/application.scss */
+/* line 345, source/application.scss */
 #search_form input[type=search], #search_form input[type=text] {
   width: 100px;
 }
