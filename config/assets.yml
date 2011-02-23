@@ -11,4 +11,5 @@ javascripts:
   sessions:
   registrations:
   invitations:
+  posts:
   passwords: 

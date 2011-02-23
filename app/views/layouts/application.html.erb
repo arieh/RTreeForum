@@ -3,7 +3,7 @@
   <head>
     <%= stylesheet_link_tag "application" %>
     <%= csrf_meta_tag %>
-    <title><%=t('site_name')%></title>
+    <title><%=t('site_name')%><%= yield(:title)%></title>
     <%= yield(:head) %>
     <link href='http://fonts.googleapis.com/css?family=IM+Fell+Great+Primer' rel='stylesheet' type='text/css'>
     <%=stylesheet_link_tag 'FloatBox' %>
@@ -32,8 +32,20 @@
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :class=> "flash #{name}" %>
       <% end %>
-      <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
-    <%= include_javascripts :common ,controller_name%>
+     <% javascripts= {
+        'base'  => %w(mootools-core-1.3 mootools-more FloatBox delegation rails application) ,
+        'index' => %w(Post Tree index)
+      }%>
+      <%= javascript_include_tag 'ckeditor/ckeditor' %>
+      <% javascripts['base'].each do |js| %>
+        <%= javascript_include_tag 'base/'+js%>
+      <%end%>
+
+      <% if (javascripts.has_key?(controller_name))%>
+          <% javascripts[controller_name].each do |js| %>
+            <%= javascript_include_tag controller_name + '/' + js %>
+          <%end%>
+      <%end%>
   </body>
 </html>

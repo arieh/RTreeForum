@@ -11,12 +11,13 @@ gem 'devise'
 gem 'rspec'
 gem 'compass'
 gem 'devise_invitable'
-gem 'jammit'
+#gem 'jammit'
 gem 'pg'
 gem 'yui-compressor' 
 gem 'postmark'
 gem 'postmark-rails'
-
+#gem 'ckeditor', '>=3.4.2'
+            
 #
 # Use unicorn as the web server
 # gem 'unicorn'
