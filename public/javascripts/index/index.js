@@ -31,7 +31,7 @@ filters.PostList = function(el){
   }  
     
   el.delegateEvent('click',{
-    '.replay span.reply' : handleClick
+    '.reply span.reply' : handleClick
   });
 }//}}}
 
