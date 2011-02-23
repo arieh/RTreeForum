@@ -6,7 +6,7 @@
 <ol class='results posts'>
 <% @Posts.each do |post| %>
   <li class='result base'>
-    <%=render :partial => 'index/post', :locals =>{:post=>post,:base=>true , :search=>true}%>
+    <%=render :partial => 'posts/post', :locals =>{:post=>post,:base=>true , :search=>true}%>
   </li>
 <%end%>
 </ol>
