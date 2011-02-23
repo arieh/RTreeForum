@@ -8,11 +8,12 @@ class ApplicationController < ActionController::Base
     ActionMailer::Base.default_url_options[:host] = request.host_with_port
   end
 
-  def check_user
+  def check_user                                           
+    allowed = {'devise/sessions'=>'new','devise/invitations'=>'edit'}
     if (!current_user) 
-      
       path = Rails.application.routes.recognize_path request.env['PATH_INFO']
-      if ( (path[:controller]=='devise/sessions' && path[:action]=='new') or (path[:controller]=='devise/invitations' && path[:action]=='edit')) 
+#      if ( (path[:controller]=='devise/sessions' && path[:action]=='new') or (path[:controller]=='devise/invitations' && path[:action]=='edit')) 
+      if (allowed.has_key?(path[:controller]) && allowed[path[:controller]]==path[:action])
         return
       end
 
