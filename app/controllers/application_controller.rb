@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
     if (!current_user) 
       
       path = Rails.application.routes.recognize_path request.env['PATH_INFO']
-      if (path[:controller]=='devise/sessions' && path[:action]=='new') 
+      if ( (path[:controller]=='devise/sessions' && path[:action]=='new') or (path[:controller]=='devise/invitations' && path[:action]=='edit')) 
         return
       end
 
