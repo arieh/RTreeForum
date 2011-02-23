@@ -39,7 +39,7 @@ filters.NewPost = function(el){
        'visibility' : 'visible'
        ,'position'  : 'relative'
      })           
-    , text = el.getElement('textarea');
+    , text = form.getElement('textarea');
   
   el.addEvent('click',click);
 }
