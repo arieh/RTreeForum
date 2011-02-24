@@ -31,7 +31,7 @@ class PostsController < ApplicationController
   end
   
   def search
-    @param = params[:search][:search]
+    @param = params[:search]
     @Posts = Post.search(:title_or_body_contains=>@param)
 
     puts(@Posts)
