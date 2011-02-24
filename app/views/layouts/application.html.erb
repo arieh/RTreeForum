@@ -20,18 +20,23 @@
         <ul>
         <%if (!current_user)%>
           <li><%=link_to t('log_in'),new_user_session_path%></li>
+        </ul>
+        </nav>
+
         <%else%>
           <li><%=link_to t('post.index.new_post'),new_posts_url,{'data-filters'=>'NewPost'}%></li>
           <li><%=link_to t('log_out'),destroy_user_session_path%></li> 
           <li><%=link_to t('invite'),new_user_invitation_path%></li>
           <li><%=link_to t('edit_account'), edit_user_registration_path%></li>
-        <%end%>
         </ul>
         <%= form_for :search,:url=>{:controller=>:posts,:action=>:search},:html=>{:id=>'search_form',:method=>'get'} do |f| %>
           <%=f.search_field :search,{:placeholder=>t('search')}%>
           <%=f.submit t('search') %>
         <%end%>
-        </nav>
+        </nav> 
+
+        <%end%>
+        
       </header>
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :class=> "flash #{name}" %>
