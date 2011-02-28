@@ -19,6 +19,8 @@
       <dd><%= f.password_field :current_password %></dd>
       <dd class='explain'><small><%=t('account.edit.opass_why')%></small></dd> 
   </dl>
+  <%= f.check_box :show_tree, {:checked => current_user.show_tree ? 'checked' : '' } %>
+  <%= f.label :show_tree, t('account.edit.show_tree'),:class=>'cb'%>
   <%= f.submit t('account.edit.submit') %>
 </fieldset>
 <% end %>

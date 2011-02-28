@@ -518,3 +518,8 @@ span.cke_skin_kama {
 #search_form input[type=search], #search_form input[type=text] {
   width: 100px;
 }
+
+/* line 355, source/application.scss */
+.tree .response {
+  display: none;
+}
