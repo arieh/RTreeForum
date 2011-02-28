@@ -3,7 +3,7 @@
 <%end%>
 
 <h1><%=t "post.index.title"%></h1>
-<ol class='posts message-list' data-filters="PostList<%=current_user.show_tree ? ',Tree' : '' %>">
+<ol class='posts message-list' data-filters="PostList"<%=current_user.show_tree ? ',Tree' : '' %>>
   <%= render :partial => 'posts/list', :locals =>{:posts=>@Posts}%>
 </ol>
 <%if (@count>@per_page)%>
