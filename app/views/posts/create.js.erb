@@ -1,4 +1,4 @@
-<% html = escape_javascript render :partial => 'index/post', :locals => {:post=>@Post, :base => (@Post.base==0)} %>
+<% html = escape_javascript render :partial => 'posts/post', :locals => {:post=>@Post, :base => (@Post.base==0)} %>
 var post = posts[<%=@Post.id%>] = 
   new <%=@Post.base ? 'Post' : 'BPost'%>(new Element('li',{
     html:'<%=html%>'

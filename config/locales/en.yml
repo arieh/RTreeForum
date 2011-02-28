@@ -38,6 +38,7 @@ en:
       opass: 'Old password'
       opass_why: 'We need this only if you change your password'
       submit: 'Save changes'
+      show_tree: 'Display forum in tree view'
         
 
 

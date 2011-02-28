@@ -17,7 +17,9 @@ FEDs::Application.routes.draw do
 
   match '/posts/new/:parent_id' => 'posts#new', :defaults => {:parent_id => false}, :as => :new_post_with_parent
 
-  match '/posts/search' => 'posts#search', :as => :search_posts
+  match '/posts/search' => 'posts#search', :as => :search_posts, :method=>:post
+
+  match '/posts/search/:search' => 'posts#search', :as => :search_posts_by_value, :method=>:get
 
   match '/invites/validate/:email/:key' => 'invites#validate'
 

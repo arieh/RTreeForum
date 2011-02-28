@@ -149,7 +149,8 @@ nav{
     top:2px;
   }
 }
-.post.current > article{
+
+.post.current > article, .base.current > article{
   background:#71D981;
   >header>.permalink{color:#8A88C4}
 }
@@ -248,6 +249,10 @@ h1{
   padding:10px;
   margin:2px 5px;
   background:$lighter_blue;
+
+  ol,ul{padding:15px;}
+  ul{list-style:disc;}
+  ol{list-style:decimal;} 
 }
 
 .base{
@@ -345,4 +350,8 @@ span.cke_skin_kama {
   input[type=search],input[type=text]{
     width:100px;
   }
+}
+
+.tree .response {
+  display:none;
 }

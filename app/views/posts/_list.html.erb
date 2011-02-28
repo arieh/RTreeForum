@@ -1,9 +1,9 @@
 <% posts.each do |p| %>
-  <li class='base  <%=(defined?(current) && current==p.id) ? 'current' : ''%>' id='post<%=p.id%>' data-filters='Base'>
+  <li class='base  <%=(defined?(current) && current==p.id) ? 'current' : ''%>' id='post<%=p.id%>' data-filters='Base<%=(defined?(current) && current==p.id) ? ',Current' : ''%><%=current_user.show_tree ? ',Tree' : '' %>'>
     <%= render :partial => 'posts/post' , :locals => {:post=>p,:base=>true}%>
     <ol class='message-list'>
     <% p.posts.each do |c| %>
-      <li class='post child <%=(defined?(current) && current==c.id) ? 'current' : 'close'%>' data-parent="<%=c.parent_id%>" id='post<%=c.id%>' data-filters='Post<%=(defined?(current) && current==c.id) ? ',Current' : ''%>'>
+      <li class='post child <%=(defined?(current) && current==c.id) ? 'current' : 'close'%>' data-parent="<%=c.parent_id%>" id='post<%=c.id%>' data-filters='Post<%=(defined?(current) && current==c.id) ? ',Current' : ''%><%=current_user.show_tree ? ',Tree' : '' %>'>
         <%= render :partial => 'posts/post' , :locals => {:post=>c, :base=>false} %>
         <aside class="comments">
           <ol class="message-list"></ol>

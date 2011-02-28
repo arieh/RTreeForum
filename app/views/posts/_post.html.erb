@@ -19,7 +19,7 @@
       <div class='response'><%=t("post.index.in_response")+' '+post.parent.user.username%></div> 
     <%end%>
   </header>
-  <div class='body'><%=post.body%></div>
+  <div class='body'><%=raw(post.body)%></div>
   <% if (@new_post) %>
     <aside class='reply'>
       <span class='reply'><%=t('post.index.reply')%></span>

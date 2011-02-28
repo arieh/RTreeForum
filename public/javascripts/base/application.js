@@ -47,10 +47,11 @@ filters.NewPost = function(el){
   function click(e){
      e.preventDefault();
      var box = new FloatBox(form,{size:{x:380,y:345}});
-     //form.getElement('input[type=submit]').dispose();
+
      if (!CKEDITOR.instances[text.id]) CKEDITOR.replace(text,{
         height : 120
      });
+
      form.addEvent('submit',function(e){
         text.set('html',CKEDITOR.instances[text.id].getData());
      });
@@ -60,7 +61,7 @@ filters.NewPost = function(el){
        'visibility' : 'visible'
        ,'position'  : 'relative'
      })           
-    , text = el.getElement('textarea');
+    , text = form.getElement('textarea');
   
   el.addEvent('click',click);
 }

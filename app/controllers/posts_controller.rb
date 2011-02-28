@@ -31,7 +31,7 @@ class PostsController < ApplicationController
   end
   
   def search
-    @param = params[:search][:search]
+    @param = params[:search]
     @Posts = Post.search(:title_or_body_contains=>@param)
 
     puts(@Posts)
@@ -52,7 +52,7 @@ class PostsController < ApplicationController
   
   def create  
     @Post = current_user.posts.new(params[:post])
-    @Post.body =sanitize @Post.body, :tags=> %w(p strong li ul ol strike a object embbed param iframe)
+    @Post.body =sanitize @Post.body, :tags=> %w(p strong ul ol li strike a object embbed param iframe) , :attributes => %{dir}
     if (@parent)
       if (@parent.base == 0) 
         @Post.base = @parent.id

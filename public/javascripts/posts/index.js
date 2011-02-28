@@ -14,7 +14,6 @@ filters.Base = function(el){
 filters.Post = function(el){
   var post = posts[el.get('id').substr(4)] = new Post(el);
   el.store('post',post);
-  posts[el.getData('parent')].addChild(post);
 };//}}}
 
 
@@ -33,9 +32,16 @@ filters.PostList = function(el){
   }  
     
   el.delegateEvent('click',{
-    '.replay span.reply' : handleClick
+    '.reply span.reply' : handleClick
   });
 }//}}}
+
+//Tree {{{
+filters.Tree = function(el){
+  el.addClass('tree');
+  var parent =  el.getData('parent');
+  if (parent) posts[parent].addChild(el);
+}
 
 //Current {{{
 filters.Current = function(el){
