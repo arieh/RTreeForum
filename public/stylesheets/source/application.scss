@@ -17,6 +17,8 @@ $light_green :  #B5FEA2;
 $dark_green :  #375B2D;
 $light_red : #FF5F5F;
 $dark_red :  #690101;
+$read_post : #608391;
+$empty_post : #ccc;
 
 @include global-reset;
 @include reset-html5;
@@ -154,6 +156,15 @@ nav{
   background:#71D981;
   >header>.permalink{color:#8A88C4}
 }
+
+.post.read > article{
+  background:$read_post;
+}
+
+.post.empty >article{
+  background:$empty_post;
+}
+
 .close{
    >article{
      > .body {display:none}  
