@@ -52,7 +52,7 @@ filters.NewPost = function(el){
         height : 120
      });
 
-     form.addEvent('submit',function(e){
+     form.addEvent('ajax:before',function(e){
         text.set('html',CKEDITOR.instances[text.id].getData());
      });
   }
