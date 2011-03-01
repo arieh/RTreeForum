@@ -410,27 +410,31 @@ h1 {
 .body ol {
   list-style: decimal;
 }
+/* line 267, source/application.heb.scss */
+.body iframe {
+  width: 100%;
+}
 
-/* line 269, source/application.heb.scss */
+/* line 270, source/application.heb.scss */
 .base {
   margin: 15px 0;
 }
-/* line 270, source/application.heb.scss */
+/* line 271, source/application.heb.scss */
 .base article {
   background: #6ba7bf;
 }
 
-/* line 277, source/application.heb.scss */
+/* line 278, source/application.heb.scss */
 h2 {
   font-size: 20px;
 }
 
-/* line 279, source/application.heb.scss */
+/* line 280, source/application.heb.scss */
 #new-post {
   visibility: hidden;
   position: absolute;
 }
-/* line 282, source/application.heb.scss */
+/* line 283, source/application.heb.scss */
 #new-post form {
   width: 380px;
   height: 300px;
@@ -438,64 +442,64 @@ h2 {
   position: relative;
   padding-right: 0;
 }
-/* line 290, source/application.heb.scss */
+/* line 291, source/application.heb.scss */
 #new-post h2 {
   text-transform: capitalize;
   text-align: center;
 }
-/* line 295, source/application.heb.scss */
+/* line 296, source/application.heb.scss */
 #new-post label {
   text-align: right;
   height: 18px;
   position: relative;
   right: 0;
 }
-/* line 302, source/application.heb.scss */
+/* line 303, source/application.heb.scss */
 #new-post input, #new-post textarea, #new-post label {
   width: 250px;
   margin: 0 auto;
 }
-/* line 307, source/application.heb.scss */
+/* line 308, source/application.heb.scss */
 #new-post textarea {
   height: 200px;
 }
-/* line 311, source/application.heb.scss */
+/* line 312, source/application.heb.scss */
 #new-post input[type=submit] {
   width: 200px;
 }
 
-/* line 316, source/application.heb.scss */
+/* line 317, source/application.heb.scss */
 #paging ol {
   font-size: 13px;
   margin-top: 20px;
 }
 
-/* line 323, source/application.heb.scss */
+/* line 324, source/application.heb.scss */
 #user_edit {
   padding-right: 155px;
 }
-/* line 326, source/application.heb.scss */
+/* line 327, source/application.heb.scss */
 #user_edit label {
   width: 150px;
   font-size: 13px;
 }
-/* line 331, source/application.heb.scss */
+/* line 332, source/application.heb.scss */
 #user_edit label, #user_edit dd {
   line-height: 20px;
   height: 20px;
   vertical-align: middle;
 }
-/* line 337, source/application.heb.scss */
+/* line 338, source/application.heb.scss */
 #user_edit dt {
   margin-top: 10px;
 }
-/* line 341, source/application.heb.scss */
+/* line 342, source/application.heb.scss */
 #user_edit small {
   font-size: 13px;
   color: #375b2d;
 }
 
-/* line 344, source/application.heb.scss */
+/* line 345, source/application.heb.scss */
 span.cke_skin_kama {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -505,7 +509,7 @@ span.cke_skin_kama {
   border-radius: 0;
 }
 
-/* line 348, source/application.heb.scss */
+/* line 349, source/application.heb.scss */
 #search_form {
   width: 220px;
   float: left;
@@ -517,24 +521,24 @@ span.cke_skin_kama {
   _display: inline;
   zoom: 1;
 }
-/* line 357, source/application.heb.scss */
+/* line 358, source/application.heb.scss */
 #search_form input[type=submit] {
   display: inline-block;
   vertical-align: top;
   _display: inline;
   zoom: 1;
 }
-/* line 361, source/application.heb.scss */
+/* line 362, source/application.heb.scss */
 #search_form input[type=search], #search_form input[type=text] {
   width: 100px;
 }
 
-/* line 366, source/application.heb.scss */
+/* line 367, source/application.heb.scss */
 .tree .response {
   display: none;
 }
 
-/* line 370, source/application.heb.scss */
+/* line 371, source/application.heb.scss */
 pre {
   direction: ltr;
 }
