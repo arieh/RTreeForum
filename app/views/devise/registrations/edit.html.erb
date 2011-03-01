@@ -8,8 +8,8 @@
     <dt><%= f.label :username, t('account.edit.username') %></dt>
       <dd><%= f.text_field :username %></dd>
 
-      <dt><%= f.label :password, t('account.edit.pass'),{:id=>'new_pass'} %></dt>
-      <dd><%= f.password_field :password %></dd>
+      <dt><%= f.label :password, t('account.edit.pass') %></dt>
+      <dd><%= f.password_field :password,{:id=>'new_pass'} %></dd>
       <dd class='explain'><small><%=t('account.edit.pass_leave_blank')%></small></dd>
 
     <dt><%= f.label :password_confirmation, t('account.edit.rpass') %></dt>
