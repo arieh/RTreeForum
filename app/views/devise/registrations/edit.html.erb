@@ -8,19 +8,25 @@
     <dt><%= f.label :username, t('account.edit.username') %></dt>
       <dd><%= f.text_field :username %></dd>
 
-    <dt><%= f.label :password, t('account.edit.pass') %></dt>
+      <dt><%= f.label :password, t('account.edit.pass'),{:id=>'new_pass'} %></dt>
       <dd><%= f.password_field :password %></dd>
       <dd class='explain'><small><%=t('account.edit.pass_leave_blank')%></small></dd>
 
     <dt><%= f.label :password_confirmation, t('account.edit.rpass') %></dt>
       <dd><%= f.password_field :password_confirmation %></dd>
 
+    
+  </dl>
+  <%= f.check_box :show_tree, {:checked => current_user.show_tree ? 'checked' : '' } %>
+  <%= f.label :show_tree, t('account.edit.show_tree'),:class=>'cb'%>
+</fieldset>
+<fieldset>
+  <dl>
     <dt><%= f.label :current_password, t('account.edit.opass') %></dt>
       <dd><%= f.password_field :current_password %></dd>
       <dd class='explain'><small><%=t('account.edit.opass_why')%></small></dd> 
   </dl>
-  <%= f.check_box :show_tree, {:checked => current_user.show_tree ? 'checked' : '' } %>
-  <%= f.label :show_tree, t('account.edit.show_tree'),:class=>'cb'%>
+
   <%= f.submit t('account.edit.submit') %>
 </fieldset>
 <% end %>

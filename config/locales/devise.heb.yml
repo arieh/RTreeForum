@@ -1,0 +1,55 @@
+heb:
+  errors:
+    messages:
+      not_found: "לא נמצא"
+      already_confirmed: "אושר בעבר"
+      not_locked: "לא נעול"
+
+  devise:
+    failure:
+      unauthenticated: 'עליך להיות רשום על מנת לבצע פעולה זו'
+      unconfirmed: 'עליך לאשר את החשבון שלך לפני ביצוע פעולה זו.'
+      locked: 'חשבונך נעול.'
+      invalid: 'כתובת דוא"ל או ססמה שגויים.'
+      invalid_token: 'מפתח אימות שגוי.'
+      timeout: 'עליך להכנס לאתר מחדש.'
+      inactive: 'חשבונך טרם הופעל.'
+    sessions:
+      signed_in: 'כניסה בוצעה בהצלחה.'
+      signed_out: 'התנתקות בוצעה בהצלחה.'
+      sign_in: "כניסה"
+      email: 'דוא"ל'
+      password: 'ססמה'
+      submit: 'הכנס'
+      forgot_pass: 'שככת את הססמה?'
+    passwords:
+      title: 'איפוס ססמה'
+      email: 'דוא"ל'
+      submit: "שלח לי את איפוס הססמה"
+      send_instructions: 'תוך מספר דקות ישלח לדוא"ל שלך הוראות איפוס מפורטות.'
+      updated: 'ססמתך שונתה בהצלחה. אתה כעת מחובר.'
+      change:
+        title: "שנה ססמה"
+        pass: 'ססמה חדשה'
+        rpass: 'אישור ססמה חדשה'
+        submit: 'שנה ססמה'
+    confirmations:
+      send_instructions: 'תוך מספר דקות תקבל דואר שיסביר לך איך להפעיל את חשבונך.'
+      confirmed: 'חשבונך אושר בהצלחה. אתה כעת מחובר.'
+    registrations:
+      signed_up: 'חשבונך נוצר בהצלחה.'
+      updated: 'פרטי החשבון עודכנו בהצלחה.'
+      destroyed: 'חשבונך נמחק בהצלחה!.'
+    unlocks:
+      send_instructions: 'הוראות לפתיחת החשבון שלך ישלחו את המייל שלך תוך מספר דקות.'
+      unlocked: 'חשבונך שוחרר בהצלחה. אתה כעת מחובר.'
+    mailer:
+      confirmation_instructions:
+        subject: 'הוראות אישור'
+      reset_password_instructions:
+        subject: 'הוראות איפוס ססמה'
+      unlock_instructions:
+        subject: 'הוראות שיחרור חשבון'
+    invitations:
+      enter_details: "הכנס את פרטיך על מנת להרשם לאתר"
+      submit: "צור חשבון!"
