@@ -36,7 +36,7 @@ en:
       pass_leave_blank: 'Leave this field empty if you do not which to change password'
       rpass: 'Confirm new password'
       opass: 'Old password'
-      opass_why: 'We need this only if you change your password'
+      opass_why: 'All changes require you to enter your password'
       submit: 'Save changes'
       show_tree: 'Display forum in tree view'
         
