@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html dir="<%=t('direction')%>">
   <head>
-    <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag "application.heb" %>
     <%= csrf_meta_tag %>
     <title><%=t('site_name')%><%= yield(:title)%></title>
     <%= yield(:head) %>

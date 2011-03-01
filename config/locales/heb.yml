@@ -1,0 +1,45 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+heb:
+  direction: rtl
+  log_in: "הכנס"
+  invite: "הזמן משתמש"
+  log_out: "התנתק"
+  edit_account: 'ערוך חשבון'
+  site_name: "FEDs"
+  search: 'חיפוש'
+  not_logged_in: "רק למשתמשים מחוברים מותר לראות את תוכן האתר"
+  errors:
+    invalid_parent: "הורה לא תקין"
+  search_page:
+    title: 'תוצאות חיפוש עבור'
+  post:
+    index:
+      title: "הודעות"
+      by: "ע\"י"
+      new_post: "צור הודעה חדשה"
+      reply: "תגובה"
+      create_success: "ההודעה נשמרה בהצלחה"
+      in_response: "בתגובה ל"
+      permalink: 'קישורקבע'
+    new:
+      title: "הודעה חדשה"
+      fields:
+        title: "כותרת"
+        body: "גוף ההודעה"
+        submit: "שמור"
+  account:
+    edit:
+      title: 'עריכת פרטי חשבון'
+      username: 'שם משתמש'
+      pass: 'ססמה חדשה'
+      pass_leave_blank: 'השאר שדה זה ריק במקרה ואינך מעוניין לשנות את הססמה'
+      rpass: 'חזור שנית על הססמה החדשה'
+      opass: 'ססמה'
+      opass_why: 'כל שינוי בפרטי החשבון דורש שימוש בססמת המשתמש'
+      submit: 'שמור שינויים'
+      show_tree: 'הצג את הודעות הפורום בצורה עצית'
+        
+
+

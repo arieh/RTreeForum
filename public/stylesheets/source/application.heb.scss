@@ -24,7 +24,7 @@ $empty_post : #ccc;
 @include reset-html5;
 
 
-html {background:#346A96}
+html {background:#346A96;}
 body{
   width:960px;
   border:5px solid #ccc;
@@ -37,15 +37,15 @@ label {
   display: block;
   width:90px;
   position:absolute;
-  left:0px;
-  text-align:right;
+  right:0px;
+  text-align:left;
 }
 
-label.cb, .cke_dialog_contents label.cke_dialog_ui_labeled_label{
+label.cb{
   display:inline;
   width:auto;
   position:relative;
-  text-align:left;
+  text-align:right;
 }
 h2{
   margin-bottom:15px;
@@ -54,7 +54,7 @@ input[type=text],input[type=password],input[type=submit]{display:block}
 
 form {
   position:relative;
-  padding-left:95px;
+  padding-right:95px;
 }
 .flash{
   width:600px;
@@ -91,7 +91,7 @@ nav{
 
 .post,.base{
   margin:5px 0;
-  margin-left:25px;
+  margin-right:25px;
   width:480px;
   position:relative;
 
@@ -100,15 +100,15 @@ nav{
   .permalink, .permalink:visited{
     color:#71D9AE;
     font-size:13px;
-    float:right;
-    padding-right:5px;
+    float:left;
+    padding-left:5px;
   }
 
   header{
     line-height:20px;
     vertical-align:baseline;
     font-size:17px;
-    padding-left:5px;
+    padding-right:5px;
     min-height:40px;
   }
 
@@ -124,30 +124,30 @@ nav{
   
   .posted_at{
     font-size:13px;
-    float:right;
-    padding-right:5px;
+    float:left;
+    padding-left:5px;
   }
 
 }
 
 .base{
-  padding-left:80px;
+  padding-right:80px;
   padding-top:5px;
   >article>header{
     line-height:30px;
     h3{font-size:20px;}
   }
   .avatar{
-    left:5px;
+    right:5px;
     top:5px;
   }
 }
 
 .post{
-  padding-left:44px;
+  padding-right:44px;
   padding-top:2px;
   .avatar{
-    left:2px;
+    right:2px;
     top:2px;
   }
 }
@@ -200,19 +200,19 @@ header.main{
     a, a:visited{color:#fff; font-weight:bold;}
 
     ul{
-      text-align:left; 
+      text-align:right; 
       width:550px;
 
       @include inline-block;
     }
     
     li {
-      margin-right:10px;
+      margin-left:10px;
       text-transform: capitalize;
       height:15px;
       line-height:15px;
-      border-left:2px solid #fff; 
-      padding-left:10px;
+      border-right:2px solid #fff; 
+      padding-right:10px;
     }
     
     li:first-child {
@@ -229,14 +229,14 @@ h1{
 }
 
 .reply{
-  text-align:right;
+  text-align:left;
   font-size:13px;
-  padding-right:5px;
+  padding-left:5px;
   min-height:18px;
 
   .reply{cursor:pointer; text-decoration:underline}
 
-  label{line-height:20px;text-align:right; width:90px; left:-5px;position:absolute; font-size:12px;}
+  label{line-height:20px;text-align:left; width:90px; right:-5px;position:absolute; font-size:12px;}
 
   form {
     display:none;
@@ -245,7 +245,7 @@ h1{
     position:relative;
     margin:5px;
     width:380px;
-    padding-left:90px;
+    padding-right:90px;
 
     textarea,input{width:95%; margin:0 auto;}
     input[type=submit]{width:295px}
@@ -264,10 +264,7 @@ h1{
   ol,ul{padding:15px;}
   ul{list-style:disc;}
   ol{list-style:decimal;} 
-
-  iframe{
-    width:100%
-  }
+  iframe{width:100%}
 }
 
 .base{
@@ -288,7 +285,7 @@ h2 {font-size:20px;}
     height:300px;
     text-align:center;
     position:relative;
-    padding-left:0
+    padding-right:0
   }
 
   h2{
@@ -297,10 +294,10 @@ h2 {font-size:20px;}
   }
 
   label {
-    text-align:left;
+    text-align:right;
     height:18px;
     position:relative;
-    left:0;
+    right:0;
   }
 
   input,textarea, label{
@@ -325,7 +322,7 @@ h2 {font-size:20px;}
 
 
 #user_edit{
-    padding-left:155px;
+    padding-right:155px;
 
   label{
     width:150px;
@@ -351,10 +348,10 @@ span.cke_skin_kama {
 
 #search_form{
   width:220px;
-  float:right;
+  float:left;
   color:#000; 
   font-size:13px;
-  padding-right:5px;
+  padding-left:5px;
   
   @include inline-block;
 
@@ -369,4 +366,8 @@ span.cke_skin_kama {
 
 .tree .response {
   display:none;
+}
+
+pre{
+  direction:ltr;
 }

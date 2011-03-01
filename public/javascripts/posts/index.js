@@ -38,17 +38,12 @@ filters.PostList = function(el){
       var target = $(e.target), form = target.getNext('form'), text = form.getElement('textarea'), id=el.getData('post-id');
       
       form.toggle();
-      
-      if (!$(posts[id]).hasClass('read')){
-        mark.send({data:{post_id:id}});
-        $(posts[id]).addClass('read');
-      }
 
       CKEDITOR.replace(text,{
          height:100
       });                       
       
-      form.addEvent('submit',function(e){
+      form.addEvent('ajax:before',function(e){
         var html = CKEDITOR.instances[text.id].getData();
         text.set('html',html);
       });                           
