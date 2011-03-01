@@ -21,6 +21,14 @@ FEDs::Application.routes.draw do
 
   match '/posts/search/:search' => 'posts#search', :as => :search_posts_by_value, :method=>:get
 
+  match '/posts/mark/:post_id' => 'posts#mark', :method => :get
+
+  match '/posts/mark/' => 'posts#mark', :method=>:post, :post_id => /.+/
+
+  match '/posts/unmark/:post_id' => 'posts#unmark', :method => :get
+
+  match '/posts/unmark/' => 'posts#unmark', :method=>:post, :post_id => /.+/ 
+
   match '/invites/validate/:email/:key' => 'invites#validate'
 
   match '/posts/:id' => 'posts#show', :as => :open_post

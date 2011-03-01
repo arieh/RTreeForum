@@ -90,6 +90,18 @@ class PostsController < ApplicationController
     end
   end
   
+  def mark 
+    current_user.mark_post(params[:post_id])
+
+    render :nothing => true
+  end
+
+  def unmark
+    current_user.unmark_post(params[:post_id])
+
+    render :nothing => true
+  end
+
   def destroy
     @Post = Post.find(params[:id])
     @Post.destroy
