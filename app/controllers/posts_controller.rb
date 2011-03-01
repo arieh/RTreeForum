@@ -54,7 +54,7 @@ class PostsController < ApplicationController
     @Post = current_user.posts.new(params[:post])
     @Post.body =sanitize @Post.body, 
       :tags=> %w(p strong ul ol li strike a object embbed param iframe img q blockquote cite s em) , 
-      :attributes => %{dir src width height style title alt href cite datetime}
+      :attributes => %{dir src width height style title alt href cite datetime target rel}
     if (@parent)
       if (@parent.base == 0) 
         @Post.base = @parent.id
