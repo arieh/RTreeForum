@@ -55,6 +55,9 @@ filters.NewPost = function(el){
      form.addEvent('ajax:before',function(e){
         text.set('html',CKEDITOR.instances[text.id].getData());
      });
+     form.addEvent('submit',function(e){
+       text.set('html',CKEDITOR.instances[text.id].getData());
+     });
   }
 
   var form = $('new-post').dispose().setStyles({
